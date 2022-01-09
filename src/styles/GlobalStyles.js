@@ -13,6 +13,7 @@ const GlobalStyle = createGlobalStyle`
     --font-dark-color: #313131;
     --font-dark-color-2: #151515;
     --sidebar-dark-color: #191D2B;
+    --highlight-color: rgb(179,84,217);
 }
 *{
     padding: 0;

@@ -11,19 +11,19 @@ const Navigation = () => {
             </div>
             <ul className="nav-items">
                 <li className="nav-items">
-                    <NavLink to="/home" activeClassName='active-class'>Home</NavLink>
+                    <NavLink style={{ textDecoration: 'none' }} to="/home" activeClassName='active-class'>Home</NavLink>
                 </li>
                 <li className="nav-items">
-                    <NavLink to="/about" activeClassName='active-class'>About</NavLink>
+                    <NavLink style={{ textDecoration: 'none' }} to="/about" activeClassName='active-class'>About</NavLink>
                 </li>
                 <li className="nav-items">
-                    <NavLink to="/resume" activeClassName='active-class'>Resume</NavLink>
+                    <NavLink style={{ textDecoration: 'none' }} to="/resume" activeClassName='active-class'>Resume</NavLink>
                 </li>
                 <li className="nav-items">
-                    <NavLink to="/portofolio" activeClassName='active-class'>Portofolio</NavLink>
+                    <NavLink style={{ textDecoration: 'none' }} to="/portofolio" activeClassName='active-class'>Portofolio</NavLink>
                 </li>
                 <li className="nav-items">
-                    <NavLink to="/contact" activeClassName='active-class'>Contact Me</NavLink>
+                    <NavLink style={{ textDecoration: 'none' }} to="/contact" activeClassName='active-class'>Contact Me</NavLink>
                 </li>
             </ul>
             <footer>
@@ -43,18 +43,19 @@ width: 100%;
 border-right: 1px solid var(--border-color);
 
 .profile-picture{
-    width: 80%;
+    width: 100%;
     border-bottom: 1px solid var(--border-color);
     text-align: center;
     padding: 2rem 0;
     img{
-        width: 80%;
+        width: 70%;
         border-radius: 50%;
         border: 8px solid var(--border-color);
     }
 }
 
 .nav-items{
+    margin-right: 40px;
     width: 100%;
     text-align: center;
     .active-class{
@@ -62,15 +63,17 @@ border-right: 1px solid var(--border-color);
         color: white;
     }
     li{
+        text-decoration: none !important;
         display: block;
         a{
             display: block;
             padding: .45rem 0;
+            margin-left: -20px;
+            margin-right: -20.8px;
             position: relative;
             z-index: 10;
             text-transform: uppercase;
             transition: all .4s ease-in-out;
-            font-weight: 600;
             letter-spacing: 1px;
             &:hover{
                 cursor: pointer;
@@ -83,7 +86,7 @@ border-right: 1px solid var(--border-color);
                 left: 0;
                 width: 0;
                 height: 50%;
-                background-color: var(--border-color);
+                background-color: var(--highlight-color);
                 transition: All 0.2s cubic-bezier(.17,.67,.83,.67);
                 opacity: 0.4;
                 z-index: -1;
@@ -101,7 +104,9 @@ footer{
     width: 100%;
     p{
         font-size: 10px;
-        padding: 10px 0;
+        margin-top: 20px;
+        margin-bottom: 12px;
+        padding: -10px 0;
         display: block;
         text-align: center;
     }
