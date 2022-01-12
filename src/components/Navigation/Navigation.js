@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-import { NavLink } from 'react-router-dom';
-import profilePicture from '../images/pp.jpg';
+import {NavLink} from 'react-router-dom';
+import profilePicture from '../../images/pp.jpg';
 
 const Navigation = () => {
     return (
@@ -10,20 +10,20 @@ const Navigation = () => {
                 <img src={profilePicture} alt='🙂' />
             </div>
             <ul className="nav-items">
-                <li className="nav-items">
-                    <NavLink style={{ textDecoration: 'none' }} to="/home" activeClassName='active-class'>Home</NavLink>
+                <li className="nav-items"> 
+                    <NavLink style={{ textDecoration: 'none' }} exact={'true'} to="/" className={({isActive})=>isActive? "active-class": ''}>Home</NavLink>
                 </li>
                 <li className="nav-items">
-                    <NavLink style={{ textDecoration: 'none' }} to="/about" activeClassName='active-class'>About</NavLink>
+                    <NavLink style={{ textDecoration: 'none' }} exact={'true'} to="/about" className={({isActive})=>isActive? "active-class": ''}>About</NavLink>
                 </li>
                 <li className="nav-items">
-                    <NavLink style={{ textDecoration: 'none' }} to="/resume" activeClassName='active-class'>Resume</NavLink>
+                    <NavLink style={{ textDecoration: 'none' }} exact={'true'} to="/resume" className={({isActive})=>isActive? "active-class": ''}>Resume</NavLink>
                 </li>
                 <li className="nav-items">
-                    <NavLink style={{ textDecoration: 'none' }} to="/portofolio" activeClassName='active-class'>Portofolio</NavLink>
+                    <NavLink style={{ textDecoration: 'none' }} exact={'true'} to="/portofolio" className={({isActive})=>isActive? "active-class": ''}>Portofolio</NavLink>
                 </li>
                 <li className="nav-items">
-                    <NavLink style={{ textDecoration: 'none' }} to="/contact" activeClassName='active-class'>Contact Me</NavLink>
+                    <NavLink style={{ textDecoration: 'none' }} exact={'true'} to="/contact" className={({isActive})=>isActive? "active-class": ''}>Contact</NavLink>
                 </li>
             </ul>
             <footer>
@@ -59,13 +59,16 @@ border-right: 1px solid var(--border-color);
     width: 100%;
     text-align: center;
     .active-class{
-        background-color: var(--primary-color-light);
+        background-color: rgba(179,84,217,.4);
         color: white;
     }
-    li{
+    li{     
         text-decoration: none !important;
         display: block;
+        font-weight: 900;
         a{
+            
+            font-size: 1rem;
             display: block;
             padding: .45rem 0;
             margin-left: -20px;
@@ -74,7 +77,7 @@ border-right: 1px solid var(--border-color);
             z-index: 10;
             text-transform: uppercase;
             transition: all .4s ease-in-out;
-            letter-spacing: 1px;
+            letter-spacing: 2px;
             &:hover{
                 cursor: pointer;
                 color: var(--white-color);
@@ -85,9 +88,8 @@ border-right: 1px solid var(--border-color);
                 bottom: 0;
                 left: 0;
                 width: 0;
-                height: 50%;
                 background-color: var(--highlight-color);
-                transition: All 0.2s cubic-bezier(.17,.67,.83,.67);
+                transition: .2s ease-in-out;
                 opacity: 0.4;
                 z-index: -1;
             }

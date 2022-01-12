@@ -4,20 +4,22 @@ import GithubIcon from '@material-ui/icons/GitHub';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import TypeAnimation from 'react-type-animation';
 
-import '../styles/Stars.css'
+import '../../styles/Stars.css'
 
 const HomePage = () => {
     return (
         <HomePageStyled>
             <div className="stars">
-                <div id='stars2'></div>
-                <div id='stars'></div>
-                <div id='stars3'></div>
+                <div className='stars'></div>
+                <div className='twinkling'></div>
+                <div className='clouds'></div>
+                <div className='clouds'></div>
             </div>
             <div className="typography">
                 <div className="name-section">
-                    <h1>Hi there! 👋</h1>
-                    <span style={{ fontSize: '60px' }}>I'm M Aqmal Pangestu</span>
+                    <p className="inline-div">Hi There!</p>
+                    <div className="emoji">👋</div>
+                    <h1 style={{ fontSize: '60px' }}>I'm M Aqmal Pangestu</h1>
                     <p>Creating magic with code and a bit of cafeine</p>
                 </div>
                 <div className="tagline">
@@ -28,7 +30,7 @@ const HomePage = () => {
                             2000,
                             'Machine Learning Developer 🤖',
                             2000,
-                            'A Cat Person 😺',
+                            'Freshgraduate 🤓',
                             2000,
                         ]}
                         wrapper="h3"
@@ -49,11 +51,56 @@ const HomePage = () => {
 }
 
 const HomePageStyled = styled.header`
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
     width: 100%;
     height: 100vh;
     position: relative;
     .name-section{
         padding-bottom: 60px;
+        .inline-div {
+            font-family: 'Poppins', sans-serif;
+            display: inline-block;
+            font-size: 70px;
+            font-weight: 600;
+        }
+        .emoji {
+            font-size: 70px;
+            animation-name: wave-animation; /* Refers to the name of your @keyframes element below */
+            animation-duration: 2.1s; /* Change to speed up or slow down */
+            animation-iteration-count: infinite; /* Never stop waving :) */
+            transform-origin: 70% 70%; /* Pivot around the bottom-left palm */
+            display: inline-block;
+            }
+
+            @keyframes wave-animation {
+            0% {
+                transform: rotate(0deg);
+            }
+            10% {
+                transform: rotate(14deg);
+            } /* The following five values can be played with to make the waving more or less extreme */
+            20% {
+                transform: rotate(-8deg);
+            }
+            30% {
+                transform: rotate(14deg);
+            }
+            40% {
+                transform: rotate(-4deg);
+            }
+            50% {
+                transform: rotate(10deg);
+            }
+            60% {
+                transform: rotate(0deg);
+            } /* Reset for the last half to pause */
+            100% {
+                transform: rotate(0deg);
+            }
+        }
+        h1{
+            color: var(--highlight-color)
+        }
     }
     .tagline{
         padding-top: 80px;
@@ -68,9 +115,6 @@ const HomePageStyled = styled.header`
         transform: translate(-50%, -50%);
         text-align: left;
         width: 80%;
-        span{
-            color: var(--highlight-color)
-        }
         .icons{
             display: flex;
             justify-content: center;
