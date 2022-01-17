@@ -4,17 +4,11 @@ import GithubIcon from '@material-ui/icons/GitHub';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import TypeAnimation from 'react-type-animation';
 
-import '../../styles/Stars.css'
 
 const HomePage = () => {
     return (
         <HomePageStyled>
-            <div className="stars">
-                <div className='stars'></div>
-                <div className='twinkling'></div>
-                <div className='clouds'></div>
-                <div className='clouds'></div>
-            </div>
+            
             <div className="typography">
                 <div className="name-section">
                     <p className="inline-div">Hi There!</p>
@@ -56,6 +50,7 @@ const HomePageStyled = styled.header`
     height: 100vh;
     position: relative;
     .name-section{
+        color: white;
         padding-bottom: 60px;
         .inline-div {
             font-family: 'Poppins', sans-serif;

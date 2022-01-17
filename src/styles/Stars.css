@@ -7,21 +7,14 @@
 }
 
 .stars {
-	z-index: 0;
+	z-index: -20;
 	background: #000 url('../images/stars.png') repeat top center;
 }
 
 .twinkling{
-	z-index: 1;
+	z-index: -20;
 	background:transparent url('../images/twinkling.png') repeat top center;
 	animation: move-twink-back 800s linear infinite;
-}
-
-.clouds{
-	z-index: 2;
-    background:transparent url('../images/clouds.png') repeat top center;
-	animation: move-clouds-back 200s linear infinite;
-	opacity: 65%;
 }
 
 @keyframes move-twink-back {

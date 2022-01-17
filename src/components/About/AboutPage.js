@@ -1,13 +1,13 @@
 import React from "react";
 import styled from "styled-components";
 import {MainLayout} from '../../styles/Layout';
-
+import Title from "../Title/Title";
 
 const AboutPage = () => {
     return (
         <MainLayout>
             <AboutStyled>
-                <h1>LOWAKDNMASKDNAWNID</h1>
+                <Title title={'About Me'}/>
             </AboutStyled>
         </MainLayout>
     )
