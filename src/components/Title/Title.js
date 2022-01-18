@@ -13,7 +13,7 @@ const Title = ({title}) => {
 const TitleStyled = styled.div`
     position: relative;
     h2{
-        color: var(--white-color);
+        color: var(--primary-color);
         font-size: 3.1rem;
         font-weight: 600;
         text-transform: uppercase;

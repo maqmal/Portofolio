@@ -1,21 +1,60 @@
 import Sidebar from './components/Navigation/Sidebar';
-import styled from 'styled-components';
 import HomePage from './components/Home/HomePage';
 import AboutPage from './components/About/AboutPage';
 import ResumePage from './components/Resume/ResumePage';
 import PortofolioPage from './components/Portofolio/PortofolioPage';
 import ContactPage from './components/Contact/ContactPage';
 import { Route, Routes } from 'react-router-dom';
+import styled from 'styled-components';
+import { useState } from 'react';
+import { useEffect } from 'react';
 
-import './styles/Stars.css'
+import { IconButton } from "@material-ui/core";
+import MenuIcon from '@material-ui/icons/Menu';
+import Switch from '@material-ui/core/Switch';
+import Brightness4Icon from '@material-ui/icons/Brightness4';
+
 function App() {
+  const [theme, setTheme] = useState('dark-theme');
+  const [checked, setChecked] = useState(false);
+  const [navToggle, setNavToggle] = useState(false);
+  useEffect(() => {
+    document.documentElement.className = theme;
+  }, [theme]);
+
+  const themeToggler = () => {
+    if (theme === 'light-theme') {
+      setTheme('dark-theme');
+      setChecked(false)
+    } else {
+      setTheme('light-theme');
+      setChecked(true)
+    }
+  }
+  console.log(navToggle)
   return (
     <div className="App">
-      <div className="stars">
-        <div className='stars'></div>
-        <div className='twinkling'></div>
+
+      <Sidebar navToggle={navToggle} theme={theme} themeToggler={themeToggler} checked={checked} setNavToggle={setNavToggle}/>
+      <div className='theme-normal'>
+        <div className={"light-dark-mode-normal "+theme}>
+          <Brightness4Icon />
+          <Switch
+            value=""
+            checked={checked}
+            inputProps={{ 'aria-label': '' }}
+            size="small"
+            onClick={themeToggler}
+          />
+        </div>
       </div>
-      <Sidebar />
+
+      <div className={"ham-burger-menu "+ navToggle+'-status'}>
+        <IconButton onClick={() => setNavToggle(!navToggle)}>
+          <MenuIcon />
+        </IconButton>
+      </div>
+
       <MainContentStyled>
         <Routes>
           <Route exact={'true'} path='/home' element={<HomePage />} />
@@ -32,9 +71,11 @@ function App() {
 
 const MainContentStyled = styled.main`
   position: relative;
-  margin-left: 14.3rem;
+  margin-left: 16.3rem;
   min-height: 100vh;
-
+  @media screen and (max-width:1200px){
+    margin-left: 0;
+  }
 `
 
 export default App;
