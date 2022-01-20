@@ -60,7 +60,6 @@ align-items: center;
 height: 100%;
 width: 100%;
 font-family: 'Poppins', sans-serif;
-
 .profile-picture{
     width: 100%;
     text-align: center;
@@ -75,15 +74,12 @@ font-family: 'Poppins', sans-serif;
         background-color: white;
     }
 }
-
 .dark-theme{
     filter: grayscale(100%);
 }
-
 .profile-picture:hover img {
 	filter: none;
 }
-
 .nav-items{
     margin-right: 40px;
     width: 100%;
@@ -114,12 +110,10 @@ font-family: 'Poppins', sans-serif;
             transform: scaleX(0);
             transform-origin: bottom left;
         }
-
         a:hover::before {
             transform: scaleX(1);
             transform-origin: bottom left;
         }
-
         a::before {
             content: " ";
             display: block;
@@ -133,7 +127,6 @@ font-family: 'Poppins', sans-serif;
         }
     }
 }
-
 footer{
     width: 100%;
     p{
@@ -145,11 +138,9 @@ footer{
         text-align: center;
     }
 } 
-
 .theme{
     display: none;
 }
-
 @media screen and (max-width:1200px){
     margin-left: 0;
     .theme{
@@ -159,13 +150,11 @@ footer{
         bottom: 20%;
     }
   }
-
 @media screen and (max-height:280px){
     .theme{
         padding-bottom: 30px;
     }
 }
-
 @media screen and (max-height:415px){
     img{
         display: none;
@@ -176,7 +165,7 @@ footer{
         width: 24%;
     }
 }
-@media screen and (min-width:665px){
+@media screen and (min-width:650px){
     .theme{
         display: none;
     }

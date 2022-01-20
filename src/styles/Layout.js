@@ -10,6 +10,7 @@ export const MainLayout = styled.div`
         padding: 2rem .4rem;
     }
 `;
+
 export const InnerLayout = styled.div`
     padding: 5rem 0;
 `;

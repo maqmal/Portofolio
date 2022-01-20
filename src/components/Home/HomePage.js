@@ -13,6 +13,14 @@ const HomePage = () => {
                     <div className="emoji">👋</div>
                     <h1>I'm Muhammad Aqmal Pangestu</h1>
                     <p className="quote">Creating magic with code and a bit of cafeine</p>
+                    <div className="icons" id="icons-mobile">
+                        <a href="https://www.linkedin.com/in/m-aqmal-pangestu-2217a7187/" className="icon i-linkedin" target="_blank" rel="noreferrer">
+                            <LinkedInIcon />
+                        </a>
+                        <a href="https://www.github.com/maqmal" className="icon i-github" target="_blank" rel="noreferrer">
+                            <GithubIcon />
+                        </a>
+                    </div>
                 </div>
                 <div className="tagline">
                     <TypeAnimation
@@ -44,12 +52,12 @@ const HomePage = () => {
                     />
                 </div>
 
-                <div className="icons">
+                <div className="icons" id="icons-normal">
                     <a href="https://www.linkedin.com/in/m-aqmal-pangestu-2217a7187/" className="icon i-linkedin" target="_blank" rel="noreferrer">
-                        <LinkedInIcon />
+                        <LinkedInIcon/>
                     </a>
                     <a href="https://www.github.com/maqmal" className="icon i-github" target="_blank" rel="noreferrer">
-                        <GithubIcon />
+                        <GithubIcon/>
                     </a>
                 </div>
             </div>
@@ -86,7 +94,6 @@ const HomePageStyled = styled.header`
                 transform-origin: 70% 70%; /* Pivot around the bottom-left palm */
                 display: inline-block;
                 }
-
                 @keyframes wave-animation {
                 0% {
                     transform: rotate(0deg);
@@ -164,14 +171,33 @@ const HomePageStyled = styled.header`
             }
         }
     }
+    #icons-mobile{ display:none; }
     .mobile-mode{ display:none; }
     @media screen and (max-width:1200px){
+        #icons-mobile{ 
+            display:flex; 
+        }
+        #icons-normal{ 
+            display:none; 
+        }
         .quote{ display: none; }
         .emoji{ display: none; }
         .normal-mode{ display:none; }
         .mobile-mode{ display:flex;}
         .tagline{
             p{
+                font-size: 0.2vh;
+                word-spacing: 1px;
+            }
+        }
+    }
+    @media screen and (max-height:380px){
+        #icons-mobile{ 
+            transform: scale(.8);
+        }
+        .tagline{
+            p{
+                margin-top: -60px;
                 font-size: 0.2vh;
                 word-spacing: 1px;
             }

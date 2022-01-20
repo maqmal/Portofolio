@@ -1,4 +1,4 @@
-import {createGlobalStyle} from 'styled-components';
+import { createGlobalStyle } from 'styled-components';
 
 const GlobalStyle = createGlobalStyle`
 .light-theme{
@@ -39,7 +39,6 @@ const GlobalStyle = createGlobalStyle`
     --scrollbar-thump-color: #6b6b6b;
     --scrollbar-track-color: #383838;
 }
-
 *{
     margin: 0;
     padding: 0;
@@ -49,13 +48,11 @@ const GlobalStyle = createGlobalStyle`
     font-family: 'Roboto Mono', monospace;
     font-size: 1.1rem;
 }
-
 body{
     background-color: var(--background-dark-color);
     color: var(--font-light-color);
     transition: all .4s ease-in-out;
 }
-
 body::-webkit-scrollbar{
     width: 9px;
     background-color: #383838;
@@ -68,7 +65,6 @@ body::-webkit-scrollbar-track{
     border-radius: 10px;
     background-color: #383838;
 }
-
 textarea{
     max-width: 100%;
 }
@@ -78,7 +74,6 @@ a{
     font-size: inherit;
     font-size: 1rem;
 }
-
 h1{
     font-size: 4rem;
     color: var(--white-color);
@@ -92,7 +87,6 @@ h1{
         font-size: 3rem
     }
 }
-
 span{
     color: var(--primary-color);
 }
@@ -101,20 +95,16 @@ h6{
     font-size: 1.2rem;
     padding-bottom: .6rem;
 }
-
 //Utilities
 .u-margin-bottom{
     margin-bottom: 4rem;
 }
-
-
 .theme-normal .light-theme{
     background-color: var(--border-color);
     svg{
         color: black;
     }
 }
-
 //Floting Toggler
 .light-dark-mode-normal{
     border-radius: 6%;
@@ -138,22 +128,19 @@ h6{
         color: var(--white-color);
     }
   }
-
   .nav-toggle{
         transform: translateX(0);
         z-index: 20;
         justify-content: center;
     }
-
   //Nav Toggler
   .ham-burger-menu{
       position: fixed;
-      left: 5%;
       top: 3%; 
       display: none;
       z-index: 15;
       svg{
-          font-size: 3rem;
+          font-size: 5vh;
       }
     }
   @media screen and (max-width:1200px){
@@ -165,28 +152,40 @@ h6{
         z-index: 1;
     }
   }
-
   //Nav Toggler
   .ham-burger-menu-nav{
       position: fixed;
-      left: 5%;
+      left: 3%;
       top: 3%; 
       display: none;
       z-index: 15;
       svg{
-          font-size: 3rem;
+          font-size: 5vh;
       }
     }
+
   @media screen and (max-width:1200px){
     .ham-burger-menu-nav{
         display: block;
         z-index: 25;
     }
   }
-
-  @media screen and (max-width:665px){
+  
+  @media screen and (max-width:650px){
     margin-left: 0;
+    .ham-burger-menu{
+        display: none;
+    }
+    .ham-burger-nav{
+        display: none;
+    }
     .theme-normal{
+        display: none;
+    }
+  }
+
+  @media screen and (min-width:650px){
+    #bottom-nav{
         display: none;
     }
   }

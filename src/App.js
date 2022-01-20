@@ -14,6 +14,8 @@ import MenuIcon from '@material-ui/icons/Menu';
 import Switch from '@material-ui/core/Switch';
 import Brightness4Icon from '@material-ui/icons/Brightness4';
 
+import BottomNavigation from './components/Navigation/BottomNavigation';
+
 function App() {
   const [theme, setTheme] = useState('dark-theme');
   const [checked, setChecked] = useState(false);
@@ -35,9 +37,9 @@ function App() {
   return (
     <div className="App">
 
-      <Sidebar navToggle={navToggle} theme={theme} themeToggler={themeToggler} checked={checked} setNavToggle={setNavToggle}/>
+      <Sidebar navToggle={navToggle} theme={theme} themeToggler={themeToggler} checked={checked} setNavToggle={setNavToggle} />
       <div className='theme-normal'>
-        <div className={"light-dark-mode-normal "+theme}>
+        <div className={"light-dark-mode-normal " + theme}>
           <Brightness4Icon />
           <Switch
             value=""
@@ -49,7 +51,7 @@ function App() {
         </div>
       </div>
 
-      <div className={"ham-burger-menu "+ navToggle+'-status'}>
+      <div className={"ham-burger-menu " + navToggle + '-status'}>
         <IconButton onClick={() => setNavToggle(!navToggle)}>
           <MenuIcon />
         </IconButton>
@@ -65,6 +67,10 @@ function App() {
           <Route exact={'true'} path='/contact' element={<ContactPage />} />
         </Routes>
       </MainContentStyled>
+
+      <div id='bottom-nav'>
+        <BottomNavigation theme={theme} themeToggler={themeToggler} checked={checked} />
+      </div>
     </div>
   );
 }

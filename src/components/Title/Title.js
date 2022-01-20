@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 
-const Title = ({title}) => {
+const Title = ({ title }) => {
     return (
         <TitleStyled>
             <h2>{title} <b><span>{title}</span></b></h2>
@@ -20,9 +20,13 @@ const TitleStyled = styled.div`
         position: relative;
         padding-bottom: .7rem;
         @media screen and (max-width: 496px){
+            padding-top:60px;
+            padding-left:10px;
             font-size: 2.8rem;
         }
         @media screen and (max-width: 370px){
+            padding-top:60px;
+            padding-left:10px;
             font-size: 2rem;
         }
         &::before{
@@ -33,7 +37,7 @@ const TitleStyled = styled.div`
             height: .33rem;
             background-color: var(--font-dark-color);
             border-radius: 15px;
-            left: 0;
+            left: 10px;
         }
         &::after{
             content: "";
@@ -50,16 +54,22 @@ const TitleStyled = styled.div`
             color: rgba(25,29,43,.59);
             font-size: 5rem;
             position: absolute;
-            left: 0;
+            left: 10px;
             top: 30%;
             z-index: -1;
             @media screen and (max-width: 620px){
+                padding-top:60px;
+                padding-left:10px;
                 font-size: 4rem;
             }
             @media screen and (max-width: 496px){
+                padding-top:60px;
+                padding-left:10px;
                 font-size: 3rem;
             }
             @media screen and (max-width: 370px){
+                padding-top:60px;
+                padding-left:10px;
                 font-size: 2rem;
             }
         }
