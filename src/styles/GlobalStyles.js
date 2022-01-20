@@ -148,7 +148,7 @@ h6{
   //Nav Toggler
   .ham-burger-menu{
       position: fixed;
-      right: 5%;
+      left: 5%;
       top: 3%; 
       display: none;
       z-index: 15;
@@ -159,17 +159,17 @@ h6{
   @media screen and (max-width:1200px){
     .ham-burger-menu{
         display: block;
-        z-index: 25;
+        z-index: 1;
     }
     .true-status{
-        z-index: -1;
+        z-index: 1;
     }
   }
 
   //Nav Toggler
   .ham-burger-menu-nav{
       position: fixed;
-      right: 5%;
+      left: 5%;
       top: 3%; 
       display: none;
       z-index: 15;
