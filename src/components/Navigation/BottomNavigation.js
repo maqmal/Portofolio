@@ -1,84 +1,79 @@
 
-import React from 'react';
+import * as React from 'react';
 import AccountCircleIcon from '@material-ui/icons/AccountCircle';
-import HomeIcon from '@material-ui/icons/Home';
-import AssignmentIcon from '@material-ui/icons/Assignment';
+import HomeRoundedIcon from '@material-ui/icons/HomeRounded';
+import BallotTwoToneIcon from '@material-ui/icons/BallotTwoTone';
+import EmailRoundedIcon from '@material-ui/icons/EmailRounded';
 import AppsIcon from '@material-ui/icons/Apps';
-import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
 
 import ProfilePicture from './ProfilePicture';
 
-import { Nav, NavItem } from 'reactstrap';
+import { Link } from 'react-router-dom';
+
+import BottomNavigationMui from '@material-ui/core/BottomNavigation';
+import BottomNavigationAction from '@material-ui/core/BottomNavigationAction';
 
 const BottomNavigation = ({ theme, themeToggler, checked }) => {
+    const [value, setValue] = React.useState('recents');
+
+    const handleChange = (event, newValue) => {
+        setValue(newValue);
+    };
     return (
         <BottomNavigationStyled>
-            <Nav className="w-100 navbar fixed-bottom bottom-nav-parent" >
-                <div className="d-flex flex-row justify-content-around w-100 bottom-nav-items">
-                    <NavItem key='1'>
-                        <NavLink to='/home' className={({ isActive }) => isActive ? "nav-link active-class" : 'nav-link'}>
-                            <div className="flex-column justify-content-center align-items-center bottom-nav-icon">
-                                <HomeIcon className='bottom-icon'/>
-                                <div className='bottom-nav-text'>Home</div>
-                            </div>
-                        </NavLink>
-                    </NavItem>
-                    <NavItem key='2'>
-                        <NavLink to='/about' className={({ isActive }) => isActive ? "nav-link active-class" : 'nav-link'}>
-                            <div className="flex-column justify-content-center align-items-center bottom-nav-icon">
-                                <AccountCircleIcon className='bottom-icon'/>
-                                <div className='bottom-nav-text'>About</div>
-                            </div>
-                        </NavLink>
-                    </NavItem>
-                    <NavItem key='3'>
-                        <div className="flex-column justify-content-center align-items-center bottom-nav-icon">
-                            {/* <ProfilePicture theme={theme} themeToggler={themeToggler} checked={checked} /> */}
-                        </div>
-                    </NavItem>
-                    <NavItem key='4'>
-                        <NavLink to='/resume' className={({ isActive }) => isActive ? "nav-link active-class" : 'nav-link'}>
-                            <div className="flex-column justify-content-center align-items-center bottom-nav-icon">
-                                <AssignmentIcon className='bottom-icon'/>
-                                <div className='bottom-nav-text'>Resume</div>
-                            </div>
-                        </NavLink>
-                    </NavItem>
-                    <NavItem key='5'>
-                        <NavLink to='/portofolio' className={({ isActive }) => isActive ? "nav-link active-class" : 'nav-link'}>
-                            <div className="flex-column justify-content-center align-items-center bottom-nav-icon">
-                                <AppsIcon className='bottom-icon'/>
-                                <div className='bottom-nav-text'>Works</div>
-                            </div>
-                        </NavLink>
-                    </NavItem>
-                </div>
-            </Nav>
+            <BottomNavigationMui
+                className='bottom-nav-parent'
+                // showLabels
+                value={value}
+                onChange={handleChange}>
+                <BottomNavigationAction
+                    component={Link}
+                    to="/home"
+                    label="Home"
+                    value="home"
+                    icon={<HomeRoundedIcon style={{fontSize:'23px'}}/>}
+                />
+                <BottomNavigationAction
+                    component={Link}
+                    to="/about"
+                    label="About"
+                    value="about"
+                    icon={<AccountCircleIcon style={{fontSize:'23px'}} />}
+                />
+                <BottomNavigationAction
+                    component={Link}
+                    to="/resume"
+                    label="Resume"
+                    value="resume"
+                    icon={<BallotTwoToneIcon style={{fontSize:'23px'}} />}
+                />
+                <BottomNavigationAction
+                    component={Link}
+                    to="/portofolio"
+                    label="Works"
+                    value="works"
+                    icon={<AppsIcon style={{fontSize:'23px'}} />}
+                />
+                <BottomNavigationAction
+                    component={Link}
+                    to="/contact"
+                    label="Contact"
+                    value="contact"
+                    icon={<EmailRoundedIcon style={{fontSize:'23px'}} />}
+                />
+            </BottomNavigationMui>
         </BottomNavigationStyled>
     )
 }
 
 const BottomNavigationStyled = styled.nav`
-.bottom-nav-parent{
-    padding-bottom: 0;
+.bottom-nav-parent {
+    position: fixed;
     bottom: 0;
-}
-.bottom-nav-items{
-    background-color: var(--font-dark-color);
-    padding-top: -60px;
-}
-.bottom-nav-icon{
-    color: var(--white-color);
-    text-align: center;
-    justify-content: center;
-    .bottom-icon{
-        font-size: 3.4vh;
-    }
-}
-.bottom-nav-text{
-    color: var(--white-color);
-    font-size: 1.2vh;
+    width:100%;
+    border-top: 1px solid var(--border-color);
+    background-color: var(--background-dark-color);
 }
 `
 export default BottomNavigation;

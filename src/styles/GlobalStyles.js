@@ -2,7 +2,7 @@ import { createGlobalStyle } from 'styled-components';
 
 const GlobalStyle = createGlobalStyle`
 .light-theme{
-    --primary-color: rgba(179,84,217);
+    --primary-color: white;
     --primary-color-light: #057FFF;
     --secondary-color: #ff7675;
     --background-dark-color: #F1F1F1;
@@ -18,10 +18,11 @@ const GlobalStyle = createGlobalStyle`
     --sidebar-dark-color: #E4E4E4;
     --scrollbar-bg-color: #383838;
     --scrollbar-thump-color: #6b6b6b;
-    --scrollbar-track-color: #383838;
+    --scrollbar-track-color: #383838;    
+    --highlight-text: rgba(179,84,217)
 }
 .dark-theme{
-    --primary-color: rgba(179,84,217);
+    --primary-color: white;
     --primary-color-light: #057FFF;
     --secondary-color: #6c757d;
     --background-dark-color: #10121A;
@@ -38,6 +39,7 @@ const GlobalStyle = createGlobalStyle`
     --scrollbar-bg-color: #383838;
     --scrollbar-thump-color: #6b6b6b;
     --scrollbar-track-color: #383838;
+    --highlight-text: rgba(179,84,217)
 }
 *{
     margin: 0;
@@ -188,6 +190,16 @@ h6{
     #bottom-nav{
         display: none;
     }
+  }
+
+  .middle-construction{
+    h1{font-size: 2vh;}
+    padding-top: 20%;
+    justify-content: center;
+    text-align: center;
+    overflow-wrap: break-word;
+    margin: auto;
+    width: 50%;
   }
 `;
 

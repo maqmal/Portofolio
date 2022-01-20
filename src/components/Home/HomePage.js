@@ -78,7 +78,7 @@ const HomePageStyled = styled.header`
         width: 80%;
         .name-section{
             color: white;
-            padding-bottom: 60px;
+            padding-bottom: 100px;
             .inline-div {
                 font-family: 'Roboto Mono', monospace;
                 display: inline-block;
@@ -121,11 +121,10 @@ const HomePageStyled = styled.header`
                 }
             }
             h1{
-                color: var(--primary-color);
+                color: var(--highlight-text);
                 font-size: 6vmin;
             }
             p{
-                padding-top: 20px;
                 font-size: 2vh;
                 color: var(--scrollbar-thump-color);
             }
@@ -145,6 +144,7 @@ const HomePageStyled = styled.header`
             margin-bottom: -4rem;
             margin-top: 2rem;
             .icon{
+                font-size: 1500px;
                 border: 2px solid var(--border-color);
                 display: flex;
                 align-items: center;
@@ -153,8 +153,8 @@ const HomePageStyled = styled.header`
                 transition: all .4s ease-in-out;
                 cursor: pointer;
                 &:hover{
-                    border: 2px solid var(--primary-color);
-                    color: var(--primary-color);
+                    border: 2px solid var(--highlight-text);
+                    color: var(--highlight-text);
                 }
                 &:not(:last-child){
                     margin-right: 1rem;
@@ -194,6 +194,9 @@ const HomePageStyled = styled.header`
     @media screen and (max-height:380px){
         #icons-mobile{ 
             transform: scale(.8);
+        }
+        .name-section{
+            padding-top: 70px;
         }
         .tagline{
             p{

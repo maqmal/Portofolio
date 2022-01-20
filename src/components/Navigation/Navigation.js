@@ -85,7 +85,7 @@ font-family: 'Poppins', sans-serif;
     width: 100%;
     text-align: center;
     .active-class{
-        background-color: var(--primary-color);
+        background-color: var(--highlight-text);
         color: white;
     }
     li{     
