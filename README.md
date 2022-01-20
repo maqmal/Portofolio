@@ -1,3 +1,3 @@
 # My personal website :)
 
-Created using react.js
+Created using react.js framework.
