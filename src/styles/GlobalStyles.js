@@ -192,6 +192,21 @@ h6{
     }
   }
 
+  /* Z-FOLD */
+  @media screen and (max-width:280px){
+    #bottom-nav{
+        display: none;
+    }
+  }
+  @media screen and (max-width:280px){
+    .ham-burger-menu{
+        display: flex;
+    }
+    .ham-burger-menu-nav{
+        display: flex;
+    }
+  }
+
   .middle-construction{
     h1{font-size: 2vh;}
     padding-top: 20%;
@@ -201,6 +216,8 @@ h6{
     margin: auto;
     width: 50%;
   }
+
+  
 `;
 
 export default GlobalStyle;
