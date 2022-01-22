@@ -1,28 +1,33 @@
 import React from "react";
 import styled from "styled-components";
 import profilePicture from '../../images/pp.png';
-import profileBackground from '../../images/inspiration-geometry.png'
 
-const ProfilePicture = ({ theme, themeToggler, checked }) => {
+const ProfilePicture = ({ theme, themeToggler }) => {
     return (
         <ProfilePictureStyled>
-            <img src={profilePicture} alt='🙂' style={{ backgroundImage: `url(${profileBackground})` }} className={theme} onClick={themeToggler}/>
+            <img src={profilePicture} alt='🙂' className={theme+" double-border"} onClick={themeToggler}/>
         </ProfilePictureStyled>
     )
 }
 
-const ProfilePictureStyled = styled.nav`
+const ProfilePictureStyled = styled.div`
 display: flex;
 width: 100%;
 text-align: center;
 justify-content: center;
+padding-bottom: 20px;
+
 img{
-    max-width: 70%;
+    max-width: 150%;
     border-radius: 50%;
     margin-bottom: 1rem;
     transition: filter 0.4s ease-in-out;
-    border: 4px solid var(--font-dark-color);
-    background-color: white;
+    border: 10px solid var(--background-dark-color);
+    background-color: var(--white-color);
+}
+
+.double-border {
+    filter: none;
 }
 
 .dark-theme{

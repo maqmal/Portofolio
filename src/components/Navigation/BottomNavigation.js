@@ -14,7 +14,7 @@ import { Link } from 'react-router-dom';
 import BottomNavigationMui from '@material-ui/core/BottomNavigation';
 import BottomNavigationAction from '@material-ui/core/BottomNavigationAction';
 
-const BottomNavigation = ({ theme, themeToggler, checked }) => {
+const BottomNavigation = ({ theme, themeToggler }) => {
     const [value, setValue] = React.useState('recents');
 
     const handleChange = (event, newValue) => {
@@ -22,6 +22,7 @@ const BottomNavigation = ({ theme, themeToggler, checked }) => {
     };
     return (
         <BottomNavigationStyled>
+
             <BottomNavigationMui
                 className='bottom-nav-parent'
                 showLabels
@@ -32,35 +33,42 @@ const BottomNavigation = ({ theme, themeToggler, checked }) => {
                     to="/home"
                     label="Home"
                     value="home"
-                    icon={<HomeRoundedIcon style={{ fontSize: '3.3vh' }} />}
+                    icon={<HomeRoundedIcon style={{ fontSize: '3.2vh' }} />}
                 />
+
                 <BottomNavigationAction
                     component={Link}
                     to="/about"
                     label="About"
                     value="about"
-                    icon={<AccountCircleIcon style={{ fontSize: '3.3vh' }} />}
+                    icon={<AccountCircleIcon style={{ fontSize: '3.2vh' }} />}
                 />
-                <BottomNavigationAction
+
+                {/* <BottomNavigationAction
                     component={Link}
                     to="/resume"
                     label="Resume"
                     value="resume"
                     icon={<BallotTwoToneIcon style={{ fontSize: '3.3vh' }} />}
+                /> */}
+                
+                <BottomNavigationAction
+                    icon={<ProfilePicture theme={theme} themeToggler={themeToggler} />}
                 />
+                
                 <BottomNavigationAction
                     component={Link}
                     to="/portofolio"
-                    label="Works"
-                    value="works"
-                    icon={<AppsIcon style={{ fontSize: '3.3vh' }} />}
+                    label="Portofolio"
+                    value="portofolio"
+                    icon={<AppsIcon style={{ fontSize: '3.2vh' }} />}
                 />
                 <BottomNavigationAction
                     component={Link}
                     to="/contact"
                     label="Contact"
                     value="contact"
-                    icon={<EmailRoundedIcon style={{ fontSize: '3.3vh' }} />}
+                    icon={<EmailRoundedIcon style={{ fontSize: '3.2vh' }} />}
                 />
             </BottomNavigationMui>
         </BottomNavigationStyled>
@@ -75,27 +83,20 @@ const BottomNavigationStyled = styled.nav`
     flex-basis: 120px;
     position: fixed;
     bottom: 0;
-    width:100%;
-    border-top: 1px solid var(--border-color);
-    background-color: var(--background-dark-color);
+    width: 100%;
 }
 @media screen and (min-width:280px){
     .bottom-nav-parent {
         a{
             padding-top: 10px;
         }
-        .MuiSvgIcon-root{
-            width: 50%;
-        }
         .MuiBottomNavigationAction-label{
             font-size: .8vh;
         }
-        flex-basis: 120px;
         position: fixed;
         bottom: 0;
-        width:100%;
         border-top: 1px solid var(--border-color);
-        background-color: var(--background-dark-color);
+        background-color: var(--background-dark-grey-sidebar);
     }
   }
 `

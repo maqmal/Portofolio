@@ -174,6 +174,7 @@ const HomePageStyled = styled.header`
     #icons-mobile{ display:none; }
     .mobile-mode{ display:none; }
     @media screen and (max-width:1200px){
+        
         #icons-mobile{ 
             display:flex; 
         }

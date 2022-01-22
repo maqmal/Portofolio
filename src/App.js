@@ -38,6 +38,7 @@ function App() {
     <div className="App">
 
       <Sidebar navToggle={navToggle} theme={theme} themeToggler={themeToggler} checked={checked} setNavToggle={setNavToggle} />
+      
       <div className='theme-normal'>
         <div className={"light-dark-mode-normal " + theme}>
           <Brightness4Icon />
@@ -69,8 +70,9 @@ function App() {
       </MainContentStyled>
 
       <div id='bottom-nav'>
-        <BottomNavigation theme={theme} themeToggler={themeToggler} checked={checked} />
+        <BottomNavigation theme={theme} themeToggler={themeToggler} />
       </div>
+
     </div>
   );
 }
