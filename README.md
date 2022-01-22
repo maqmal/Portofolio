@@ -2,4 +2,4 @@
 
 Created using react.js framework.
 
-This website is very responsive :)
+This is the most mobile-friendly, responsive protofolio ever :)
