@@ -84,7 +84,12 @@ const HomePageStyled = styled.header`
                 display: inline-block;
                 font-size: 8vh;
                 font-weight: 900;
-                color: var(--font-light-color);
+                background: #edca85; /* fallback for old browsers */
+                background: -webkit-linear-gradient(to right, #edca85, #b354d9); /* Chrome 10-25, Safari 5.1-6 */
+                background: linear-gradient(to right, #edca85, #b354d9); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+                -webkit-background-clip: text;
+                background-clip: text;
+                color: transparent;
             }
             .emoji{
                 font-size: 6vh;
@@ -121,7 +126,13 @@ const HomePageStyled = styled.header`
                 }
             }
             h1{
-                color: var(--highlight-text);
+                background: #edca85; /* fallback for old browsers */
+                background: -webkit-linear-gradient(to right, #edca85, #b354d9); /* Chrome 10-25, Safari 5.1-6 */
+                background: linear-gradient(to right, #edca85, #b354d9); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+                -webkit-background-clip: text;
+                background-clip: text;
+                color: transparent;
+
                 font-size: 6vmin;
             }
             p{

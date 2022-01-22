@@ -1,12 +1,6 @@
 import { createGlobalStyle } from 'styled-components';
 
 const GlobalStyle = createGlobalStyle`
-:root {
-    --bg-body: #dff9fb;
-    --bg-nav: #220455;
-    --color-nav: #644c89;
-    --color-nav-active: #fff;
-}
 .light-theme{
     --primary-color: white;
     --primary-color-light: #057FFF;

@@ -85,7 +85,7 @@ font-family: 'Poppins', sans-serif;
     width: 100%;
     text-align: center;
     .active-class{
-        background-color: var(--highlight-text);
+        background-color: rgba(236,200,134,.5);
         color: white;
     }
     li{     
@@ -120,7 +120,7 @@ font-family: 'Poppins', sans-serif;
             position: absolute;
             top: 0; right: 0; bottom: 0; left: 0;
             inset: 0 0 0 0;
-            background: rgba(179,84,217,.4);
+            background: rgba(207,141,176,.4);
             z-index: -1;
             transition: transform .3s ease;
             color: white;
