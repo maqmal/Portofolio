@@ -19,10 +19,15 @@ function Sidebar({ navToggle, theme, themeToggler, checked, setNavToggle }) {
 }
 
 const SidebarStyled = styled.div`
+    background: var(--background-dark-grey);
+    box-shadow: 0 8px 32px 0 var(--shadow);
+    backdrop-filter: blur( 15px );
+    -webkit-backdrop-filter: blur( 15px );
+    border-radius: 10px;
+    
     width: 14.3rem;
     position: fixed;
     height: 100vh;
-    background-color: var(--background-dark-grey);
     overflow: hidden;
     transition: all .4s ease-in-out;
     .quote{ display:none; }

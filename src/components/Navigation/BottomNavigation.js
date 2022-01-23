@@ -33,7 +33,7 @@ const BottomNavigation = ({ theme, themeToggler }) => {
                     to="/home"
                     label="Home"
                     value="home"
-                    icon={<HomeRoundedIcon style={{ fontSize: '3.2vh' }} />}
+                    icon={<HomeRoundedIcon style={{ fontSize: '3.2vh', color:'var(--white-color)' }} />}
                 />
 
                 <BottomNavigationAction
@@ -41,7 +41,7 @@ const BottomNavigation = ({ theme, themeToggler }) => {
                     to="/about"
                     label="About"
                     value="about"
-                    icon={<AccountCircleIcon style={{ fontSize: '3.2vh' }} />}
+                    icon={<AccountCircleIcon style={{ fontSize: '3.2vh', color:'var(--white-color)' }} />}
                 />
 
                 {/* <BottomNavigationAction
@@ -49,7 +49,7 @@ const BottomNavigation = ({ theme, themeToggler }) => {
                     to="/resume"
                     label="Resume"
                     value="resume"
-                    icon={<BallotTwoToneIcon style={{ fontSize: '3.3vh' }} />}
+                    icon={<BallotTwoToneIcon style={{ fontSize: '3.3vh', color:'var(--white-color)' }} />}
                 /> */}
                 
                 <BottomNavigationAction
@@ -61,14 +61,14 @@ const BottomNavigation = ({ theme, themeToggler }) => {
                     to="/portofolio"
                     label="Portofolio"
                     value="portofolio"
-                    icon={<AppsIcon style={{ fontSize: '3.2vh' }} />}
+                    icon={<AppsIcon style={{ fontSize: '3.2vh', color:'var(--white-color)' }} />}
                 />
                 <BottomNavigationAction
                     component={Link}
                     to="/contact"
                     label="Contact"
                     value="contact"
-                    icon={<EmailRoundedIcon style={{ fontSize: '3.2vh' }} />}
+                    icon={<EmailRoundedIcon style={{ fontSize: '3.2vh', color:'var(--white-color)' }} />}
                 />
             </BottomNavigationMui>
         </BottomNavigationStyled>
@@ -79,6 +79,7 @@ const BottomNavigationStyled = styled.nav`
 .bottom-nav-parent {
     .MuiBottomNavigationAction-label{
         font-size: 1.2vh;
+        color: var(--white-color);
     }
     flex-basis: 120px;
     position: fixed;

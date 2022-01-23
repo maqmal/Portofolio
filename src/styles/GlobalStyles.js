@@ -2,11 +2,12 @@ import { createGlobalStyle } from 'styled-components';
 
 const GlobalStyle = createGlobalStyle`
 .light-theme{
+    --shadow: rgba( 31, 38, 135, 0.37 );
     --primary-color: white;
     --primary-color-light: #057FFF;
     --secondary-color: #ff7675;
-    --background-dark-color: #F1F1F1;
-    --background-dark-grey: #e4e4e4;
+    --background-dark-color: rgb(252,252,246);
+    --background-dark-grey: rgba(228, 228, 228, .05);
     --background-dark-grey-sidebar: rgba(228, 228, 228, .44);
     --background-dark-grey-span: rgba(228, 228, 228);
     --border-color: #cbced8;
@@ -21,13 +22,21 @@ const GlobalStyle = createGlobalStyle`
     --scrollbar-thump-color: #6b6b6b;
     --scrollbar-track-color: #383838;    
     --highlight-text: rgba(179,84,217);
+
+    --n1: rgba(252,252,246,1);
+    --n2: rgba(255,246,230,0.8914916308320203);
+    --n3: rgba(255,255,247,1);
+    --n4: rgba(255,250,250,1);
+    --n5: rgba(250,251,255,1);
+    --n6: rgba(255,255,255,1);
 }
 .dark-theme{
+    --shadow: #0E0E0E;
     --primary-color: white;
     --primary-color-light: #057FFF;
     --secondary-color: #6c757d;
     --background-dark-color: #10121A;
-    --background-dark-grey: #191D2B;
+    --background-dark-grey: rgba( 25, 29, 43, 0.7 );
     --background-dark-grey-sidebar: rgba(25, 29, 43, .44);
     --background-dark-grey-span: rgba(228, 228, 228, .044);
     --border-color: #2e344e;
@@ -53,6 +62,7 @@ const GlobalStyle = createGlobalStyle`
     font-size: 1.1rem;
 }
 body{
+    background: linear-gradient(to left, var(--n1) 0%, var(--n2) 18%, var(--n3) 43%, var(--n4) 52%, var(--n5) 70%, var(--n6) 100%);
     background-color: var(--background-dark-color);
     color: var(--font-light-color);
     transition: all .4s ease-in-out;
@@ -148,6 +158,12 @@ h6{
       }
     }
   @media screen and (max-width:1200px){
+      body{
+        background: linear-gradient(180deg, var(--n3) 0%, var(--n1) 50%);
+        background-color: var(--background-dark-color);
+        color: var(--font-light-color);
+        transition: all .4s ease-in-out;
+      }
     .ham-burger-menu{
         display: block;
         z-index: 1;
@@ -219,8 +235,6 @@ h6{
     margin: auto;
     width: 50%;
   }
-
-  
 `;
 
 export default GlobalStyle;

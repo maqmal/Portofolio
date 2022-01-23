@@ -9,7 +9,7 @@ const HomePage = () => {
         <HomePageStyled>
             <div className="typography">
                 <div className="name-section">
-                    <p className="inline-div">Hi There!</p>
+                    <p className="inline-div">Hello!</p>
                     <div className="emoji">👋</div>
                     <h1>I'm Muhammad Aqmal Pangestu</h1>
                     <p className="quote">Creating magic with code and a bit of cafeine</p>
@@ -54,10 +54,10 @@ const HomePage = () => {
 
                 <div className="icons" id="icons-normal">
                     <a href="https://www.linkedin.com/in/m-aqmal-pangestu-2217a7187/" className="icon i-linkedin" target="_blank" rel="noreferrer">
-                        <LinkedInIcon/>
+                        <LinkedInIcon />
                     </a>
                     <a href="https://www.github.com/maqmal" className="icon i-github" target="_blank" rel="noreferrer">
-                        <GithubIcon/>
+                        <GithubIcon />
                     </a>
                 </div>
             </div>
@@ -194,7 +194,7 @@ const HomePageStyled = styled.header`
             display:none; 
         }
         .quote{ display: none; }
-        .emoji{ display: none; }
+        .emoji{ padding-bottom:40px; }
         .normal-mode{ display:none; }
         .mobile-mode{ display:flex;}
         .tagline{
@@ -213,7 +213,7 @@ const HomePageStyled = styled.header`
             padding-top: 70px;
         }
         .tagline{
-            margin-top: 200px;
+            /* margin-top: 200px; */
             p{
                 margin-top: -180px;
                 margin-top: -60px;

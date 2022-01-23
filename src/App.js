@@ -4,6 +4,8 @@ import AboutPage from './components/About/AboutPage';
 import ResumePage from './components/Resume/ResumePage';
 import PortofolioPage from './components/Portofolio/PortofolioPage';
 import ContactPage from './components/Contact/ContactPage';
+import BottomNavigation from './components/Navigation/BottomNavigation';
+
 import { Route, Routes } from 'react-router-dom';
 import styled from 'styled-components';
 import { useState } from 'react';
@@ -13,8 +15,6 @@ import { IconButton } from "@material-ui/core";
 import MenuIcon from '@material-ui/icons/Menu';
 import Switch from '@material-ui/core/Switch';
 import Brightness4Icon from '@material-ui/icons/Brightness4';
-
-import BottomNavigation from './components/Navigation/BottomNavigation';
 
 function App() {
   const [theme, setTheme] = useState('dark-theme');

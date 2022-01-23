@@ -70,7 +70,7 @@ font-family: 'Poppins', sans-serif;
         border-radius: 50%;
         margin-bottom: 1rem;
         transition: filter 0.4s ease-in-out;
-        border: 4px solid var(--border-color);
+        border: 4px solid var(--scrollbar-bg-color);
         background-color: white;
     }
 }
