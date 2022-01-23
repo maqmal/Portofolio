@@ -186,7 +186,9 @@ const HomePageStyled = styled.header`
     #icons-mobile{ display:none; }
     .mobile-mode{ display:none; }
     @media screen and (max-width:1200px){
-        
+        .typography{   
+            top: 43%;
+        }
         #icons-mobile{ 
             display:flex; 
         }
@@ -199,7 +201,6 @@ const HomePageStyled = styled.header`
         .mobile-mode{ display:flex;}
         .tagline{
             p{
-                margin-top: -50px;
                 font-size: 0.2vh;
                 word-spacing: 1px;
             }
