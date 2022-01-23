@@ -155,6 +155,7 @@ const HomePageStyled = styled.header`
             margin-bottom: -4rem;
             margin-top: 2rem;
             .icon{
+                color: var(--font-light-color);
                 font-size: 1500px;
                 border: 2px solid var(--border-color);
                 display: flex;
@@ -164,8 +165,8 @@ const HomePageStyled = styled.header`
                 transition: all .4s ease-in-out;
                 cursor: pointer;
                 &:hover{
-                    border: 2px solid var(--highlight-text);
-                    color: var(--highlight-text);
+                    border: 2px solid #0A66C2;
+                    color: #0A66C2;
                 }
                 &:not(:last-child){
                     margin-right: 1rem;
@@ -198,6 +199,7 @@ const HomePageStyled = styled.header`
         .mobile-mode{ display:flex;}
         .tagline{
             p{
+                margin-top: -50px;
                 font-size: 0.2vh;
                 word-spacing: 1px;
             }
@@ -211,7 +213,9 @@ const HomePageStyled = styled.header`
             padding-top: 70px;
         }
         .tagline{
+            margin-top: 200px;
             p{
+                margin-top: -180px;
                 margin-top: -60px;
                 font-size: 0.2vh;
                 word-spacing: 1px;

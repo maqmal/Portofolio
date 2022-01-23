@@ -8,6 +8,7 @@ const GlobalStyle = createGlobalStyle`
     --background-dark-color: #F1F1F1;
     --background-dark-grey: #e4e4e4;
     --background-dark-grey-sidebar: rgba(228, 228, 228, .44);
+    --background-dark-grey-span: rgba(228, 228, 228);
     --border-color: #cbced8;
     --background-light-color: #F1F1F1;
     --background-light-color-2: rgba(3,127,255,.3);
@@ -19,7 +20,7 @@ const GlobalStyle = createGlobalStyle`
     --scrollbar-bg-color: #383838;
     --scrollbar-thump-color: #6b6b6b;
     --scrollbar-track-color: #383838;    
-    --highlight-text: rgba(179,84,217)
+    --highlight-text: rgba(179,84,217);
 }
 .dark-theme{
     --primary-color: white;
@@ -28,6 +29,7 @@ const GlobalStyle = createGlobalStyle`
     --background-dark-color: #10121A;
     --background-dark-grey: #191D2B;
     --background-dark-grey-sidebar: rgba(25, 29, 43, .44);
+    --background-dark-grey-span: rgba(228, 228, 228, .044);
     --border-color: #2e344e;
     --background-light-color: #F1F1F1;
     --background-light-color-2: rgba(3,127,255,.3);
@@ -39,7 +41,7 @@ const GlobalStyle = createGlobalStyle`
     --scrollbar-bg-color: #383838;
     --scrollbar-thump-color: #6b6b6b;
     --scrollbar-track-color: #383838;
-    --highlight-text: rgba(179,84,217)
+    --highlight-text: rgba(179,84,217);
 }
 *{
     margin: 0;

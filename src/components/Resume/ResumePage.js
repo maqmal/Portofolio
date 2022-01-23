@@ -7,7 +7,7 @@ const ResumePage = () => {
     return (
         <MainLayout>
             <ResumePageStyled>
-                <Title title={'Resume'} />
+                <Title title={'Resume'} span={'resume'} />
                 <div className="middle-construction">
                     <h1>Underconstruction</h1>
                 </div>

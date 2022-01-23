@@ -7,7 +7,7 @@ const AboutPage = () => {
     return (
         <MainLayout>
             <AboutStyled>
-                <Title title={'About Me'} />
+                <Title title={'About Me'} span={'About Me'} />
                 <div className="middle-construction">
                     <h1>Underconstruction</h1>
                 </div>

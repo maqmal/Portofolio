@@ -6,7 +6,7 @@ const PortofolioPage = () => {
     return (
         <MainLayout>
             <PortofolioPageStyled>
-                <Title title={'Portofolio'}/>
+                <Title title={'Portofolio'} span={'Portofolio'}/>
                 <div className="middle-construction">
                     <h1>Underconstruction</h1>
                 </div>
