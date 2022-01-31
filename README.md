@@ -18,6 +18,6 @@ Tablet view
 Normal view
 ![alt text](https://github.com/maqmal/Portofolio/blob/main/preview/normal%20light.png)
 Mobile view
-![alt text](https://github.com/maqmal/Portofolio/blob/main/preview/mobile%20light.jpg)
+![alt text](https://github.com/maqmal/Portofolio/blob/main/preview/mobil%20light.jpg)
 Tablet view
 ![alt text](https://github.com/maqmal/Portofolio/blob/main/preview/tablet%20light.png)
