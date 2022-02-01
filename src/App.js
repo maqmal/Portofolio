@@ -5,6 +5,7 @@ import ResumePage from './components/Resume/ResumePage';
 import PortofolioPage from './components/Portofolio/PortofolioPage';
 import ContactPage from './components/Contact/ContactPage';
 import BottomNavigation from './components/Navigation/BottomNavigation';
+import LoadingPage from './components/Loading/LoadingPage';
 
 import { Route, Routes } from 'react-router-dom';
 import styled from 'styled-components';
@@ -20,9 +21,20 @@ function App() {
   const [theme, setTheme] = useState('dark-theme');
   const [checked, setChecked] = useState(false);
   const [navToggle, setNavToggle] = useState(false);
+  const [loading, setLoading] = useState(true);
+
   useEffect(() => {
     document.documentElement.className = theme;
   }, [theme]);
+
+  useEffect(()=>{
+    const loadData = async () => {
+      await new Promise((r) => setTimeout(r, 1500));
+      setLoading((loading) => !loading);
+    };
+
+    loadData();
+  }, [])
 
   const themeToggler = () => {
     if (theme === 'light-theme') {
@@ -33,48 +45,52 @@ function App() {
       setChecked(true)
     }
   }
-  console.log(navToggle)
-  return (
-    <div className="App">
 
-      <Sidebar navToggle={navToggle} theme={theme} themeToggler={themeToggler} checked={checked} setNavToggle={setNavToggle} />
-      
-      <div className='theme-normal'>
-        <div className={"light-dark-mode-normal " + theme}>
-          <Brightness4Icon />
-          <Switch
-            value=""
-            checked={checked}
-            inputProps={{ 'aria-label': '' }}
-            size="small"
-            onClick={themeToggler}
-          />
+  if (loading) {
+    return <LoadingPage />
+  } else {
+    return (
+      <div className="App">
+
+        <Sidebar navToggle={navToggle} theme={theme} themeToggler={themeToggler} checked={checked} setNavToggle={setNavToggle} />
+
+        <div className='theme-normal'>
+          <div className={"light-dark-mode-normal " + theme}>
+            <Brightness4Icon />
+            <Switch
+              value=""
+              checked={checked}
+              inputProps={{ 'aria-label': '' }}
+              size="small"
+              onClick={themeToggler}
+            />
+          </div>
         </div>
+
+        <div className={"ham-burger-menu " + navToggle + '-status'}>
+          <IconButton onClick={() => setNavToggle(!navToggle)}>
+            <MenuIcon />
+          </IconButton>
+        </div>
+
+        <MainContentStyled>
+          <Routes>
+            <Route exact={'true'} path='/home' element={<HomePage />} />
+            <Route exact={'true'} path='/' element={<HomePage />} />
+            <Route exact={'true'} path='/about' element={<AboutPage />} />
+            <Route exact={'true'} path='/resume' element={<ResumePage />} />
+            <Route exact={'true'} path='/portofolio' element={<PortofolioPage />} />
+            <Route exact={'true'} path='/contact' element={<ContactPage />} />
+          </Routes>
+        </MainContentStyled>
+
+        <div id='bottom-nav'>
+          <BottomNavigation theme={theme} themeToggler={themeToggler} />
+        </div>
+
       </div>
-
-      <div className={"ham-burger-menu " + navToggle + '-status'}>
-        <IconButton onClick={() => setNavToggle(!navToggle)}>
-          <MenuIcon />
-        </IconButton>
-      </div>
-
-      <MainContentStyled>
-        <Routes>
-          <Route exact={'true'} path='/home' element={<HomePage />} />
-          <Route exact={'true'} path='/' element={<HomePage />} />
-          <Route exact={'true'} path='/about' element={<AboutPage />} />
-          <Route exact={'true'} path='/resume' element={<ResumePage />} />
-          <Route exact={'true'} path='/portofolio' element={<PortofolioPage />} />
-          <Route exact={'true'} path='/contact' element={<ContactPage />} />
-        </Routes>
-      </MainContentStyled>
-
-      <div id='bottom-nav'>
-        <BottomNavigation theme={theme} themeToggler={themeToggler} />
-      </div>
-
-    </div>
-  );
+    )
+  };
 }
 
 const MainContentStyled = styled.main`

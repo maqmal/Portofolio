@@ -155,6 +155,7 @@ h6{
       z-index: 15;
       svg{
           font-size: 5vh;
+          color: var(--white-color);
       }
     }
   @media screen and (max-width:1200px){
@@ -181,6 +182,7 @@ h6{
       z-index: 15;
       svg{
           font-size: 5vh;
+          color: var(--white-color);
       }
     }
 
