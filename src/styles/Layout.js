@@ -2,11 +2,11 @@ import styled from "styled-components";
 
 
 export const MainLayout = styled.div`
-animation: fadeIn 1s;
-    -webkit-animation: fadeIn 1s;
-    -moz-animation: fadeIn 1s;
-    -o-animation: fadeIn 1s;
-    -ms-animation: fadeIn 1s;
+    animation: fadeIn .4s;
+    -webkit-animation: fadeIn .4s;
+    -moz-animation: fadeIn .4s;
+    -o-animation: fadeIn .4s;
+    -ms-animation: fadeIn .4s;
 
     @keyframes fadeIn {
     0% {opacity:0;}
@@ -34,7 +34,8 @@ animation: fadeIn 1s;
     }
 
 
-    padding: 5rem;
+    padding: 3.5rem 2rem;
+    
     @media screen and (max-width: 642px){
         padding: 4rem;
     }

@@ -5,10 +5,9 @@ const GlobalStyle = createGlobalStyle`
     --shadow: rgba( 31, 38, 135, 0.37 );
     --primary-color: white;
     --primary-color-light: #057FFF;
-    --secondary-color: #ff7675;
     --background-dark-color: rgb(252,252,246);
     --background-dark-grey: rgba(228, 228, 228, .05);
-    --background-dark-grey-sidebar: rgba(228, 228, 228, .44);
+    --background-dark-grey-sidebar: rgba(228, 228, 228);
     --background-dark-grey-span: rgba(228, 228, 228);
     --border-color: #cbced8;
     --background-light-color: #F1F1F1;
@@ -22,6 +21,7 @@ const GlobalStyle = createGlobalStyle`
     --scrollbar-thump-color: #6b6b6b;
     --scrollbar-track-color: #383838;    
     --highlight-text: rgba(179,84,217);
+    --grad: #ff9b70;
 
     --n1: rgba(252,252,246,1);
     --n2: rgba(255,246,230,0.8914916308320203);
@@ -34,10 +34,9 @@ const GlobalStyle = createGlobalStyle`
     --shadow: #0E0E0E;
     --primary-color: white;
     --primary-color-light: #057FFF;
-    --secondary-color: #6c757d;
     --background-dark-color: #10121A;
     --background-dark-grey: rgba( 25, 29, 43, 0.7 );
-    --background-dark-grey-sidebar: rgba(25, 29, 43, .44);
+    --background-dark-grey-sidebar: rgba(25, 29, 43);
     --background-dark-grey-span: rgba(228, 228, 228, .044);
     --border-color: #2e344e;
     --background-light-color: #F1F1F1;
@@ -51,6 +50,7 @@ const GlobalStyle = createGlobalStyle`
     --scrollbar-thump-color: #6b6b6b;
     --scrollbar-track-color: #383838;
     --highlight-text: rgba(179,84,217);
+    --grad: #EAC38A;
 }
 *{
     margin: 0;
@@ -127,7 +127,7 @@ h6{
     top: 50%;
     background-color: var(--font-dark-color);
     width: 4.5rem;
-    height: 2.5rem;
+    height: 'auto';
     z-index: 15;
     display: flex;
     flex-flow: column;

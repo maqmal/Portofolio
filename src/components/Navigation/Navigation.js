@@ -85,7 +85,7 @@ font-family: 'Poppins', sans-serif;
     width: 100%;
     text-align: center;
     .active-class{
-        background-color: rgba(236,200,134,.5);
+        background-color: var(--grad);
         color: white;
     }
     li{     
@@ -93,7 +93,7 @@ font-family: 'Poppins', sans-serif;
         display: block;
         font-weight: 100;
         a{
-            font-size: 3vh;
+            font-size: 2.5vh;
             display: block;
             padding: .45rem 0;
             margin-left: -20px;

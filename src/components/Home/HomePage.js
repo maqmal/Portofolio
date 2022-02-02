@@ -114,9 +114,9 @@ animation: fadeIn 1s;
                 display: inline-block;
                 font-size: 8vh;
                 font-weight: 900;
-                background: #edca85; /* fallback for old browsers */
-                background: -webkit-linear-gradient(to right, #edca85, #b354d9); /* Chrome 10-25, Safari 5.1-6 */
-                background: linear-gradient(to right, #edca85, #b354d9); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+                background: var(--grad); /* fallback for old browsers */
+                background: -webkit-linear-gradient(to right, var(--grad), #b354d9); /* Chrome 10-25, Safari 5.1-6 */
+                background: linear-gradient(to right, var(--grad), #b354d9); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
                 -webkit-background-clip: text;
                 background-clip: text;
                 color: transparent;
@@ -156,9 +156,9 @@ animation: fadeIn 1s;
                 }
             }
             h1{
-                background: #edca85; /* fallback for old browsers */
-                background: -webkit-linear-gradient(to right, #edca85, #b354d9); /* Chrome 10-25, Safari 5.1-6 */
-                background: linear-gradient(to right, #edca85, #b354d9); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+                background: var(--grad); /* fallback for old browsers */
+                background: -webkit-linear-gradient(to right, var(--grad), #b354d9); /* Chrome 10-25, Safari 5.1-6 */
+                background: linear-gradient(to right, var(--grad), #b354d9); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
                 -webkit-background-clip: text;
                 background-clip: text;
                 color: transparent;
@@ -174,6 +174,9 @@ animation: fadeIn 1s;
             padding-top: 80px;
             padding-bottom: 20px;;
             color: var(--font-light-color);
+            .normal-mode{
+                margin-top: -50px;
+            }
             p{
                 font-size: 3vh;
                 word-spacing: 2px;

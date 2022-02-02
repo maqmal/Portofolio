@@ -2,7 +2,6 @@
 import * as React from 'react';
 import AccountCircleIcon from '@material-ui/icons/AccountCircle';
 import HomeRoundedIcon from '@material-ui/icons/HomeRounded';
-import BallotTwoToneIcon from '@material-ui/icons/BallotTwoTone';
 import EmailRoundedIcon from '@material-ui/icons/EmailRounded';
 import AppsIcon from '@material-ui/icons/Apps';
 import styled from 'styled-components';
@@ -22,7 +21,6 @@ const BottomNavigation = ({ theme, themeToggler }) => {
     };
     return (
         <BottomNavigationStyled>
-
             <BottomNavigationMui
                 className='bottom-nav-parent'
                 showLabels
@@ -43,14 +41,6 @@ const BottomNavigation = ({ theme, themeToggler }) => {
                     value="about"
                     icon={<AccountCircleIcon style={{ fontSize: '3.2vh', color:'var(--white-color)' }} />}
                 />
-
-                {/* <BottomNavigationAction
-                    component={Link}
-                    to="/resume"
-                    label="Resume"
-                    value="resume"
-                    icon={<BallotTwoToneIcon style={{ fontSize: '3.3vh', color:'var(--white-color)' }} />}
-                /> */}
                 
                 <BottomNavigationAction
                     icon={<ProfilePicture theme={theme} themeToggler={themeToggler} />}

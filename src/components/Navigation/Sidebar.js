@@ -25,7 +25,7 @@ const SidebarStyled = styled.div`
     -webkit-backdrop-filter: blur( 15px );
     border-radius: 10px;
     
-    width: 14.3rem;
+    width: 13.5rem;
     position: fixed;
     height: 100vh;
     overflow: hidden;
