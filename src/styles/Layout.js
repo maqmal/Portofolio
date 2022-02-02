@@ -34,7 +34,7 @@ export const MainLayout = styled.div`
     }
 
 
-    padding: 3.5rem 2rem;
+    padding: 3rem 2rem;
     
     @media screen and (max-width: 642px){
         padding: 4rem;

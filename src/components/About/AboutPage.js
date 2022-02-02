@@ -11,12 +11,15 @@ import UnfoldMoreRoundedIcon from '@material-ui/icons/UnfoldMoreRounded';
 import StorageOutlinedIcon from '@material-ui/icons/StorageOutlined';
 import ImportantDevicesOutlinedIcon from '@material-ui/icons/ImportantDevicesOutlined';
 import MemoryIcon from '@material-ui/icons/Memory';
+import AccountTreeRoundedIcon from '@material-ui/icons/AccountTreeRounded';
 
 import {
     DiJavascript1,
     DiReact,
     DiNodejs,
-    DiPython
+    DiMongodb,
+    DiPython,
+    DiPostgresql,
 } from "react-icons/di";
 import { SiTensorflow } from "react-icons/si";
 
@@ -38,7 +41,8 @@ const AboutPage = () => {
     }
 
     const toBottom = () => {
-        window.scrollTo(0, document.body.scrollHeight);
+        const title = document.getElementById('title');
+        title.scrollIntoView();
     }
 
     return (
@@ -73,9 +77,9 @@ const AboutPage = () => {
                             I am experienced in using <span>Python and Javascript </span>
                             programming language to build cool app!
                             <br /><br />
-                            During the pandemic, I like to use my free time to learn 
+                            During the pandemic, I like to use my free time to learn
                             <span> modern javascript framework </span>such as <span>Node.js, React.js,</span>
-                             and apply my knowledge of Deep Learning using <span>Tensorflow</span>.
+                            and apply my knowledge of Deep Learning using <span>Tensorflow</span>.
                             <br /><br />
                         </p>
                         <center>
@@ -85,8 +89,8 @@ const AboutPage = () => {
                 </div>
             </AboutStyled1>
 
-            <div style={{ marginTop: '10%' }}>
-                <Title title={'Tech Stack'} span={'Tech Stack'} />
+            <div style={{ marginTop: '10%' }} id='title'>
+                <Title title={'Tech Stack'} span={'Tech Stack'}/>
             </div>
 
             <AboutStyled2>
@@ -94,9 +98,9 @@ const AboutPage = () => {
                     <div className="card">
                         <div className="box" id="box-1" style={{ transform: 'none' }}>
                             <div className="content">
-                                <h2><StorageOutlinedIcon style={{ fontSize: '100px' }} /></h2>
-                                <h3>Backend Developer</h3><br />
-                                <p>"Testing leads to failure, and failure leads to understanding"</p>
+                                <h2><AccountTreeRoundedIcon style={{ fontSize: '100px' }} /></h2>
+                                <h3>Backend</h3><br />
+                                <p>"Testing leads to failure, and failure leads to understanding."</p>
                                 <p><i>- Burt Rutan</i></p>
                                 <a onClick={() => showTechStack('box-1')} style={{ cursor: 'pointer' }}><UnfoldMoreRoundedIcon /></a>
                             </div>
@@ -113,7 +117,7 @@ const AboutPage = () => {
                         <div className="box" id="box-2" style={{ transform: 'none' }}>
                             <div className="content">
                                 <h2><ImportantDevicesOutlinedIcon style={{ fontSize: '100px' }} /></h2>
-                                <h3>Frontend Developer</h3><br />
+                                <h3>Frontend</h3><br />
                                 <p>"The function of a good software is to make the complex appear to be simple." </p>
                                 <p><i>- Grady Booch</i></p>
                                 <a onClick={() => showTechStack('box-2')} style={{ cursor: 'pointer' }}><UnfoldMoreRoundedIcon /></a>
@@ -131,9 +135,9 @@ const AboutPage = () => {
                         <div className="box" id="box-3" style={{ transform: 'none' }}>
                             <div className="content">
                                 <h2><MemoryIcon style={{ fontSize: '100px' }} /></h2>
-                                <h3>Machine Learning Developer</h3><br />
+                                <h3>Machine Learning</h3><br />
                                 <p>"Computers are able to see, hear and learn.  Welcome to the future." </p>
-                                <p><i>-Dave Waters</i></p>
+                                <p><i>- Dave Waters</i></p>
                                 <a onClick={() => showTechStack('box-3')} style={{ cursor: 'pointer' }}><UnfoldMoreRoundedIcon /></a>
                             </div>
                         </div>
@@ -141,6 +145,24 @@ const AboutPage = () => {
                             <Tilt>
                                 <DiPython style={{ fontSize: '60px' }} />
                                 <SiTensorflow style={{ fontSize: '30px' }} />
+                            </Tilt>
+                        </div>
+                    </div>
+
+                    <div className="card">
+                        <div className="box" id="box-4" style={{ transform: 'none' }}>
+                            <div className="content">
+                                <h2><StorageOutlinedIcon style={{ fontSize: '100px' }} /></h2>
+                                <h3>Database</h3><br />
+                                <p>"Fold knowledge into data, so program logic can be stupid and robust." </p>
+                                <p><i>- Robe Pike</i></p>
+                                <a onClick={() => showTechStack('box-4')} style={{ cursor: 'pointer' }}><UnfoldMoreRoundedIcon /></a>
+                            </div>
+                        </div>
+                        <div className="tech-icon">
+                            <Tilt>
+                                <DiMongodb style={{ fontSize: '30px' }} />
+                                <DiPostgresql style={{ fontSize: '60px' }} />
                             </Tilt>
                         </div>
                     </div>
@@ -157,9 +179,7 @@ display: flex;
 justify-content: center;
 align-items: center;
 flex-wrap: wrap;
-margin-top: 3%;
-margin-bottom: -15%;
-
+margin-bottom: -50%;
 .tech-icon{
     position: fixed;
     left: 35%;
@@ -206,7 +226,11 @@ margin-bottom: -15%;
 }
 
 .container .card:nth-child(3) .box .content a {
-    background: var(--background-light-color-2);
+    background: var(--background-dark-grey-sidebar);
+}
+
+.container .card:nth-child(4) .box .content a {
+    background: var(--background-light-color-2 );
 }
 
 .container .card .box {
@@ -358,7 +382,7 @@ margin-top: 4rem;
     .paragraph{
         color: var(--font-light-color);
         padding: 1rem 0;
-        padding-right: 3rem;
+        padding-right: 5rem;
         span{
             font-style: italic;
             background: var(--grad); /* fallback for old browsers */
