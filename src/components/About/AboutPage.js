@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import styled from "styled-components";
 import { MainLayout } from '../../styles/Layout';
 import Tilt from 'react-parallax-tilt';
@@ -8,7 +8,6 @@ import Cat from "../../images/cat.png";
 import CatBG from "../../images/cat-bg.jpg";
 
 import UnfoldMoreRoundedIcon from '@material-ui/icons/UnfoldMoreRounded';
-import StorageOutlinedIcon from '@material-ui/icons/StorageOutlined';
 import ImportantDevicesOutlinedIcon from '@material-ui/icons/ImportantDevicesOutlined';
 import MemoryIcon from '@material-ui/icons/Memory';
 import AccountTreeRoundedIcon from '@material-ui/icons/AccountTreeRounded';
@@ -16,28 +15,51 @@ import AccountTreeRoundedIcon from '@material-ui/icons/AccountTreeRounded';
 import {
     DiJavascript1,
     DiReact,
-    DiNodejs,
-    DiMongodb,
+    DiNodejsSmall,
     DiPython,
+    DiMongodb,
     DiPostgresql,
+    DiHtml5,
+    DiCss3Full
 } from "react-icons/di";
-import { SiTensorflow } from "react-icons/si";
+import { SiTensorflow, SiExpress, SiScikitlearn } from "react-icons/si";
 
 const AboutPage = () => {
     const [loading, setLoading] = useState(true);
+    const [cardElmt, setCardElmt] = useState('')
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
 
     const imageLoaded = async () => {
         setLoading(false);
     }
 
+    const prevCountRef = useRef();
+    useEffect(() => {
+        prevCountRef.current = cardElmt;
+    }, [cardElmt]);
+    const closeTechStack = (box) => {
+        if (prevCountRef.current.style.transform !== 'none' && prevCountRef.current !== box) {
+            prevCountRef.current.style.transform = "none";
+            const item = prevCountRef.current.childNodes[0].childNodes[0].childNodes[5].childNodes[0]
+            item.innerHTML = '<path d="M12 5.83l2.46 2.46c.39.39 1.02.39 1.41 0 .39-.39.39-1.02 0-1.41L12.7 3.7a.9959.9959 0 00-1.41 0L8.12 6.88c-.39.39-.39 1.02 0 1.41.39.39 1.02.39 1.41 0L12 5.83zm0 12.34l-2.46-2.46a.9959.9959 0 00-1.41 0c-.39.39-.39 1.02 0 1.41l3.17 3.18c.39.39 1.02.39 1.41 0l3.17-3.17c.39-.39.39-1.02 0-1.41a.9959.9959 0 00-1.41 0L12 18.17z"></path>'
+        }
+    }
+
     const showTechStack = (idName) => {
         const box = document.getElementById(idName);
+        const item = box.childNodes[0].childNodes[0].childNodes[5].childNodes[0]
         if (box.style.transform === 'none') {
             box.style.transform = "translateY(-20%)";
+            item.innerHTML = '<path d="M7.41 18.59L8.83 20 12 16.83 15.17 20l1.41-1.41L12 14l-4.59 4.59zm9.18-13.18L15.17 4 12 7.17 8.83 4 7.41 5.41 12 10l4.59-4.59z"></path>'
         } else {
             box.style.transform = "none";
+            item.innerHTML = '<path d="M12 5.83l2.46 2.46c.39.39 1.02.39 1.41 0 .39-.39.39-1.02 0-1.41L12.7 3.7a.9959.9959 0 00-1.41 0L8.12 6.88c-.39.39-.39 1.02 0 1.41.39.39 1.02.39 1.41 0L12 5.83zm0 12.34l-2.46-2.46a.9959.9959 0 00-1.41 0c-.39.39-.39 1.02 0 1.41l3.17 3.18c.39.39 1.02.39 1.41 0l3.17-3.17c.39-.39.39-1.02 0-1.41a.9959.9959 0 00-1.41 0L12 18.17z"></path>'
         }
-
+        setCardElmt(box)
+        closeTechStack(box)
     }
 
     const toBottom = () => {
@@ -67,18 +89,18 @@ const AboutPage = () => {
 
                 <div className="right-content">
                     <br />
+                    <br />
                     <strong>
-                        <h1>LET ME <span> INTRODUCE </span> MYSELF</h1>
+                        <h1>LET ME <span> INTRODUCE </span> MYSELF 😸</h1>
                     </strong>
                     <div className="paragraph">
                         <p>
-                            Meow meow! I love cats! 😾 Anyway... <br /><br />
-                            I am <span>Aqmal</span>, an Informatics <span>fresh graduate</span> from <span>Telkom University</span>, which is located in <span>Bandung, Indonesia</span>.
-                            I am experienced in using <span>Python and Javascript </span>
+                            I am <span>Aqmal</span>, an Informatics <span>fresh graduate</span> from <span>Telkom University</span>, based in <span>Bandung, Indonesia</span>.
+                            I am experienced in using <span>Javascript and Python </span>
                             programming language to build cool app!
                             <br /><br />
                             During the pandemic, I like to use my free time to learn
-                            <span> modern javascript framework </span>such as <span>Node.js, React.js,</span>
+                            <span> modern javascript framework </span>such as <span>Node.js, React.js, </span>
                             and apply my knowledge of Deep Learning using <span>Tensorflow</span>.
                             <br /><br />
                         </p>
@@ -90,86 +112,88 @@ const AboutPage = () => {
             </AboutStyled1>
 
             <div style={{ marginTop: '10%' }} id='title'>
-                <Title title={'Tech Stack'} span={'Tech Stack'}/>
+                <Title title={'Area of expertise'} span={'Expertise'} />
             </div>
 
             <AboutStyled2>
                 <div className="container">
-                    <div className="card">
-                        <div className="box" id="box-1" style={{ transform: 'none' }}>
-                            <div className="content">
-                                <h2><AccountTreeRoundedIcon style={{ fontSize: '100px' }} /></h2>
-                                <h3>Backend</h3><br />
-                                <p>"Testing leads to failure, and failure leads to understanding."</p>
-                                <p><i>- Burt Rutan</i></p>
-                                <a onClick={() => showTechStack('box-1')} style={{ cursor: 'pointer' }}><UnfoldMoreRoundedIcon /></a>
-                            </div>
-                        </div>
-                        <div className="tech-icon">
-                            <Tilt>
-                                <DiJavascript1 style={{ fontSize: '30px' }} />
-                                <DiNodejs style={{ fontSize: '60px' }} />
-                            </Tilt>
-                        </div>
-                    </div>
+                    <Tilt tiltMaxAngleY={15} tiltMaxAngleX={15}>
+                        <div className="card">
+                            <div className="box" id="box-1" style={{ transform: 'none' }}>
+                                <Tilt tiltReverse={true} tiltMaxAngleY={8} tiltMaxAngleX={8}>
+                                    <div className="content">
+                                        <h2><AccountTreeRoundedIcon style={{ fontSize: '100px' }} /></h2>
+                                        <h3>Backend Development</h3><br />
+                                        <p>"Testing leads to failure, and failure leads to understanding."</p>
+                                        <p><i>- Burt Rutan</i></p>
+                                        <a onClick={() => showTechStack('box-1')} style={{ cursor: 'pointer' }} className="btn-card">
+                                            <UnfoldMoreRoundedIcon /></a>
+                                    </div>
 
-                    <div className="card">
-                        <div className="box" id="box-2" style={{ transform: 'none' }}>
-                            <div className="content">
-                                <h2><ImportantDevicesOutlinedIcon style={{ fontSize: '100px' }} /></h2>
-                                <h3>Frontend</h3><br />
-                                <p>"The function of a good software is to make the complex appear to be simple." </p>
-                                <p><i>- Grady Booch</i></p>
-                                <a onClick={() => showTechStack('box-2')} style={{ cursor: 'pointer' }}><UnfoldMoreRoundedIcon /></a>
+                                </Tilt>
+                            </div>
+                            <div className="tech-icon">
+                                <Tilt style={{ marginTop: '40%' }}>
+                                    <DiMongodb style={{ fontSize: '35px' }} className="the-icon" />
+                                    <SiExpress style={{ fontSize: '35px' }} className="the-icon" />
+                                    <DiNodejsSmall style={{ fontSize: '35px' }} className="the-icon" />
+                                    <DiPostgresql style={{ fontSize: '35px' }} className="the-icon" />
+                                </Tilt>
                             </div>
                         </div>
-                        <div className="tech-icon">
-                            <Tilt>
-                                <DiJavascript1 style={{ fontSize: '30px' }} />
-                                <DiReact style={{ fontSize: '60px' }} />
-                            </Tilt>
-                        </div>
-                    </div>
+                    </Tilt>
 
-                    <div className="card">
-                        <div className="box" id="box-3" style={{ transform: 'none' }}>
-                            <div className="content">
-                                <h2><MemoryIcon style={{ fontSize: '100px' }} /></h2>
-                                <h3>Machine Learning</h3><br />
-                                <p>"Computers are able to see, hear and learn.  Welcome to the future." </p>
-                                <p><i>- Dave Waters</i></p>
-                                <a onClick={() => showTechStack('box-3')} style={{ cursor: 'pointer' }}><UnfoldMoreRoundedIcon /></a>
+                    <Tilt tiltMaxAngleY={15} tiltMaxAngleX={15}>
+                        <div className="card">
+                            <div className="box" id="box-2" style={{ transform: 'none' }}>
+                                <Tilt tiltReverse={true} tiltMaxAngleY={8} tiltMaxAngleX={8}>
+                                    <div className="content">
+                                        <h2><ImportantDevicesOutlinedIcon style={{ fontSize: '100px' }} /></h2>
+                                        <h3>Frontend Development</h3><br />
+                                        <p>"The function of a good software is to make the complex appear to be simple." </p>
+                                        <p><i>- Grady Booch</i></p>
+                                        <a onClick={() => showTechStack('box-2')} style={{ cursor: 'pointer' }} className="btn-card"><UnfoldMoreRoundedIcon /></a>
+                                    </div>
+                                </Tilt>
+                            </div>
+                            <div className="tech-icon">
+                                <Tilt style={{ marginTop: '40%' }}>
+                                    <DiHtml5 style={{ fontSize: '35px' }} className="the-icon" />
+                                    <DiCss3Full style={{ fontSize: '35px' }} className="the-icon" />
+                                    <DiReact style={{ fontSize: '35px' }} className="the-icon" />
+                                    <DiJavascript1 style={{ fontSize: '35px' }} className="the-icon" />
+                                </Tilt>
                             </div>
                         </div>
-                        <div className="tech-icon">
-                            <Tilt>
-                                <DiPython style={{ fontSize: '60px' }} />
-                                <SiTensorflow style={{ fontSize: '30px' }} />
-                            </Tilt>
-                        </div>
-                    </div>
+                    </Tilt>
 
-                    <div className="card">
-                        <div className="box" id="box-4" style={{ transform: 'none' }}>
-                            <div className="content">
-                                <h2><StorageOutlinedIcon style={{ fontSize: '100px' }} /></h2>
-                                <h3>Database</h3><br />
-                                <p>"Fold knowledge into data, so program logic can be stupid and robust." </p>
-                                <p><i>- Robe Pike</i></p>
-                                <a onClick={() => showTechStack('box-4')} style={{ cursor: 'pointer' }}><UnfoldMoreRoundedIcon /></a>
+                    <Tilt tiltMaxAngleY={15} tiltMaxAngleX={15}>
+                        <div className="card">
+                            <div className="box" id="box-3" style={{ transform: 'none' }}>
+                                <Tilt tiltReverse={true} tiltMaxAngleY={8} tiltMaxAngleX={8}>
+                                    <div className="content">
+                                        <h2><MemoryIcon style={{ fontSize: '100px' }} /></h2>
+                                        <h3>Machine Learning</h3><br />
+                                        <p>"Computers are able to see, hear and learn.  Welcome to the future." </p>
+                                        <p><i>- Dave Waters</i></p>
+                                        <a onClick={() => showTechStack('box-3')} style={{ cursor: 'pointer' }} className="btn-card">
+                                            <UnfoldMoreRoundedIcon /></a>
+                                    </div>
+                                </Tilt>
+                            </div>
+                            <div className="tech-icon">
+                                <Tilt style={{ marginTop: '20%' }}>
+                                    <DiPython style={{ fontSize: '40px' }} className="the-icon" />&nbsp;
+                                    <SiTensorflow style={{ fontSize: '32px' }} className="the-icon" />&nbsp;
+                                    <SiScikitlearn style={{ fontSize: '45px' }} className="the-icon" />
+                                </Tilt>
                             </div>
                         </div>
-                        <div className="tech-icon">
-                            <Tilt>
-                                <DiMongodb style={{ fontSize: '30px' }} />
-                                <DiPostgresql style={{ fontSize: '60px' }} />
-                            </Tilt>
-                        </div>
-                    </div>
+                    </Tilt>
 
                 </div>
             </AboutStyled2>
-        </MainLayout>
+        </MainLayout >
     )
 }
 
@@ -182,12 +206,14 @@ flex-wrap: wrap;
 margin-bottom: -50%;
 .tech-icon{
     position: fixed;
-    left: 35%;
-    bottom: 0%;
+    left: 50%;
+    bottom: -2%;
     transform: translate(-50%, -50%);
     margin: 0 auto;
     z-index: -1;
-    padding-left: 100px;
+    .the-icon{
+        color: rgba(234, 195, 138, .7);
+    }
 }
 
 .container {
@@ -197,6 +223,7 @@ margin-bottom: -50%;
     flex-wrap: wrap;
     max-width: 1200px;
     margin: 40px 0;
+    margin-left: -10%;
 }
 
 .container .card {
@@ -219,18 +246,6 @@ margin-bottom: -50%;
 
 .container .card:nth-child(1) .box .content a {
     background: rgba(234, 195, 138, .3);
-}
-
-.container .card:nth-child(2) .box .content a {
-    background: rgba(179, 84, 217, .3);
-}
-
-.container .card:nth-child(3) .box .content a {
-    background: var(--background-dark-grey-sidebar);
-}
-
-.container .card:nth-child(4) .box .content a {
-    background: var(--background-light-color-2 );
 }
 
 .container .card .box {
@@ -287,11 +302,14 @@ margin-bottom: -50%;
 }
 
 .container .card .box .content p {
-    font-size: 2vh;
+    font-size: 1.7vh;
     font-weight: 300;
     color: #a4acc4;
     z-index: 1;
     transition: 0.5s;
+    i{   
+        font-size: 2vh;
+    }
 }
 
 .container .card .box .content a {
@@ -308,8 +326,8 @@ margin-bottom: -50%;
 }
 .container .card .box .content a:hover {
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.6);
-    background: #fff;
-    color: #000;
+    background: rgba(207,141,176,.4);
+    color: white;
 }
 `
 
@@ -403,7 +421,7 @@ margin-top: 4rem;
   height: 2vw;
   width: 2vw;
   border-style: solid;
-  border-color: white;
+  border-color: var(--white);
   border-width: 0px 2px 2px 0px;
   transform: rotate(45deg);
   transition: border-width 150ms ease-in-out;

@@ -34,7 +34,9 @@ export const MainLayout = styled.div`
     }
 
 
-    padding: 3rem 2rem;
+    padding-top: 4rem;
+    padding-left: 3rem;
+    padding-bottom: 2rem;
     
     @media screen and (max-width: 642px){
         padding: 4rem;
@@ -42,8 +44,4 @@ export const MainLayout = styled.div`
     @media screen and (max-width: 571px){
         padding: 2rem .4rem;
     }
-`;
-
-export const InnerLayout = styled.div`
-    padding: 5rem 0;
 `;

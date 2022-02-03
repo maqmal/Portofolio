@@ -39,7 +39,7 @@ const Navigation = ({ theme, themeToggler, checked }) => {
                     <NavLink style={{ textDecoration: 'none' }} exact={'true'} to="/resume" className={({ isActive }) => isActive ? "active-class" : ''}>Resume</NavLink>
                 </li>
                 <li className="nav-items">
-                    <NavLink style={{ textDecoration: 'none' }} exact={'true'} to="/portofolio" className={({ isActive }) => isActive ? "active-class" : ''}>Portofolio</NavLink>
+                    <NavLink style={{ textDecoration: 'none' }} exact={'true'} to="/portofolio" className={({ isActive }) => isActive ? "active-class" : ''}>Projects</NavLink>
                 </li>
                 <li className="nav-items">
                     <NavLink style={{ textDecoration: 'none' }} exact={'true'} to="/contact" className={({ isActive }) => isActive ? "active-class" : ''}>Contact</NavLink>

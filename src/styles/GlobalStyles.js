@@ -23,12 +23,12 @@ const GlobalStyle = createGlobalStyle`
     --highlight-text: rgba(179,84,217);
     --grad: #ff9b70;
 
-    --n1: rgba(252,252,246,1);
-    --n2: rgba(255,246,230,0.8914916308320203);
-    --n3: rgba(255,255,247,1);
-    --n4: rgba(255,250,250,1);
-    --n5: rgba(250,251,255,1);
-    --n6: rgba(255,255,255,1);
+    --n1: #fff;
+    --n2: #fff;
+    --n3: #fff;
+    --n4: #fff;
+    --n5: rgb(252,252,246);
+    --n6: rgb(255,255,255);
 }
 .dark-theme{
     --shadow: #0E0E0E;
@@ -154,7 +154,8 @@ h6{
       display: none;
       z-index: 15;
       svg{
-          font-size: 5vh;
+          margin-top: -30%;
+          font-size: 4vw;
           color: var(--white-color);
       }
     }
@@ -216,6 +217,16 @@ h6{
   @media screen and (max-width:280px){
     #bottom-nav{
         display: none;
+    }
+    .ham-burger-menu{
+      position: fixed;
+      left: 3%;
+      top: 3%; 
+      display: none;
+      svg{
+          font-size: 7vw;
+          color: var(--white-color);
+      }
     }
   }
 
