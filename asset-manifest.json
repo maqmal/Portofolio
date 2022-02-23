@@ -1,29 +1,29 @@
 {
   "files": {
-    "main.css": "/portofolio/static/css/main.a89562f5.css",
-    "main.js": "/portofolio/static/js/main.d0c4ea8a.js",
-    "static/media/recommerce-home.png": "/portofolio/static/media/recommerce-home.8df84cec79873c277220.png",
-    "static/media/neuralkernel-home.png": "/portofolio/static/media/neuralkernel-home.36127caacbe94346409d.png",
-    "static/media/recommerce-shop.png": "/portofolio/static/media/recommerce-shop.d02e67994ce9842dc5d5.png",
-    "static/media/mainpic.png": "/portofolio/static/media/mainpic.70757ab1d94ff5652506.png",
-    "static/media/mainpic-bg.jpg": "/portofolio/static/media/mainpic-bg.ee9b72e3532ba7671f6c.jpg",
-    "static/media/ml-weth1.png": "/portofolio/static/media/ml-weth1.89a9bf7317196bc43e34.png",
-    "static/media/ml-glaucoma1.png": "/portofolio/static/media/ml-glaucoma1.c5f52fc4a199eebe8bbe.png",
-    "static/media/ml-nlp2.png": "/portofolio/static/media/ml-nlp2.dba8bb98c5f4872c7b13.png",
-    "static/media/recommerce-signin-google.png": "/portofolio/static/media/recommerce-signin-google.6def5d662933be7d69de.png",
-    "static/media/ml-nlp1.png": "/portofolio/static/media/ml-nlp1.19560dcbac97522a5988.png",
-    "static/media/ml-rec2.png": "/portofolio/static/media/ml-rec2.573bc3b1ba3bf053b957.png",
-    "static/media/ml-piano2.jpg": "/portofolio/static/media/ml-piano2.fbc26afa24f59dc234b7.jpg",
-    "static/media/pp.png": "/portofolio/static/media/pp.b78b54ab1e11f8a0f40e.png",
-    "static/media/ml-weth2.png": "/portofolio/static/media/ml-weth2.504f382b6b654805690f.png",
-    "static/media/ml-rec1.png": "/portofolio/static/media/ml-rec1.00ab25292a7eac2f4605.png",
-    "static/media/recommerce-signinsignup.png": "/portofolio/static/media/recommerce-signinsignup.03ff4c443f8a9a793483.png",
-    "index.html": "/portofolio/index.html",
-    "main.a89562f5.css.map": "/portofolio/static/css/main.a89562f5.css.map",
-    "main.d0c4ea8a.js.map": "/portofolio/static/js/main.d0c4ea8a.js.map"
+    "main.css": "/static/css/main.a89562f5.css",
+    "main.js": "/static/js/main.48ea559b.js",
+    "static/media/recommerce-home.png": "/static/media/recommerce-home.8df84cec79873c277220.png",
+    "static/media/neuralkernel-home.png": "/static/media/neuralkernel-home.36127caacbe94346409d.png",
+    "static/media/recommerce-shop.png": "/static/media/recommerce-shop.d02e67994ce9842dc5d5.png",
+    "static/media/mainpic.png": "/static/media/mainpic.70757ab1d94ff5652506.png",
+    "static/media/mainpic-bg.jpg": "/static/media/mainpic-bg.ee9b72e3532ba7671f6c.jpg",
+    "static/media/ml-weth1.png": "/static/media/ml-weth1.89a9bf7317196bc43e34.png",
+    "static/media/ml-glaucoma1.png": "/static/media/ml-glaucoma1.c5f52fc4a199eebe8bbe.png",
+    "static/media/ml-nlp2.png": "/static/media/ml-nlp2.dba8bb98c5f4872c7b13.png",
+    "static/media/recommerce-signin-google.png": "/static/media/recommerce-signin-google.6def5d662933be7d69de.png",
+    "static/media/ml-nlp1.png": "/static/media/ml-nlp1.19560dcbac97522a5988.png",
+    "static/media/ml-rec2.png": "/static/media/ml-rec2.573bc3b1ba3bf053b957.png",
+    "static/media/ml-piano2.jpg": "/static/media/ml-piano2.fbc26afa24f59dc234b7.jpg",
+    "static/media/pp.png": "/static/media/pp.b78b54ab1e11f8a0f40e.png",
+    "static/media/ml-weth2.png": "/static/media/ml-weth2.504f382b6b654805690f.png",
+    "static/media/ml-rec1.png": "/static/media/ml-rec1.00ab25292a7eac2f4605.png",
+    "static/media/recommerce-signinsignup.png": "/static/media/recommerce-signinsignup.03ff4c443f8a9a793483.png",
+    "index.html": "/index.html",
+    "main.a89562f5.css.map": "/static/css/main.a89562f5.css.map",
+    "main.48ea559b.js.map": "/static/js/main.48ea559b.js.map"
   },
   "entrypoints": [
     "static/css/main.a89562f5.css",
-    "static/js/main.d0c4ea8a.js"
+    "static/js/main.48ea559b.js"
   ]
 }
