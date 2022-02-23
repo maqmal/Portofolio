@@ -19,7 +19,6 @@ const ProjectCardWeb = () => {
 
 
 const ProjectCardWebStyled = styled.div`
-margin-left: -5%;
 display: flex;
 flex-wrap: wrap;
 align-content: space-between;

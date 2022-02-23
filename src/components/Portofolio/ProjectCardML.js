@@ -24,7 +24,6 @@ const ProjectCardML = () => {
 
 
 const ProjectCardMLStyled = styled.div`
-margin-left: -5%;
 display: flex;
 flex-wrap: wrap;
 align-content: space-between;

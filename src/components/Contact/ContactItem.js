@@ -55,6 +55,13 @@ align-items: center;
         color: transparent;
     }
 }
+@media screen and (max-width:1200px){
+    padding: .9rem 2rem;
+}
+
+@media screen and (max-width:360px){
+    padding: .7rem 1rem;
+}
 `;
 
 export default ContactItem;

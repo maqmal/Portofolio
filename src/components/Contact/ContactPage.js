@@ -47,9 +47,6 @@ const ContactStyled = styled.section`
     .right-content{
         display: grid;
         grid-template-columns: repeat(1, 1fr);
-        @media screen and (max-width: 502px){
-            width: 70%;
-        }
     }
     .contact-title{
         h4{
@@ -58,43 +55,14 @@ const ContactStyled = styled.section`
             font-size: 1.8rem;
         }
     }
-    .form{
-        width: 100%;
-        @media screen and (max-width: 502px){
-            width: 100%;
-        }
-        .form-field{
-            margin-top: 2rem;
-            position: relative;
-            width: 100%;
-            label{
-                position: absolute;
-                left: 20px;
-                top: -19px;
-                display: inline-block;
-                background-color: var(--background-dark-color);
-                padding:0 .5rem;
-                color: inherit;
-            }
-            input{
-                border: 1px solid var(--border-color);
-                outline: none;
-                background: transparent;
-                height: 50px;
-                padding:0 15px;
-                width: 100%;
-                color: inherit;
-            }
-            textarea{
-                background-color: transparent;
-                border: 1px solid var(--border-color);
-                outline: none;
-                color: inherit;
-                width: 100%;
-                padding: .8rem 1rem;
-            }
-        }
-        
+}
+
+@media screen and (max-width:1200px){
+    .contact-section{
+        margin-left: -1%;
+        margin-top: 10%;
+        margin-bottom: 15%;
+        margin-right: 7%;
     }
 }
 `

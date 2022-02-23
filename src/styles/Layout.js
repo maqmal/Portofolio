@@ -42,6 +42,6 @@ export const MainLayout = styled.div`
         padding: 4rem;
     }
     @media screen and (max-width: 571px){
-        padding: 2rem .4rem;
+        padding: 2rem 1rem;
     }
 `;

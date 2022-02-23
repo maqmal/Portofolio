@@ -42,10 +42,12 @@ const PortofolioPage = () => {
                         </div>
                     </div>
                 </div>
-
-                {webOpened && <ProjectCardWeb />}
-                {MLOpened && <ProjectCardML />}
-
+                
+                <div className="card-container">
+                    {webOpened && <ProjectCardWeb />}
+                    {MLOpened && <ProjectCardML />}
+                </div>
+                
             </PortofolioPageStyled>
         </MainLayout>
     )
@@ -63,6 +65,13 @@ flex-direction: column;
 .button{
     display: flex;
     justify-content: space-between;
+}
+.card-container{
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
 }
 `
 

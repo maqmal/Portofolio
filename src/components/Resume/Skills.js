@@ -45,6 +45,10 @@ const SkillsStyled = styled.section`
             grid-template-columns: repeat(1, 1fr);
         }
     }
+
+@media screen and (max-width:1200px){
+    margin-left: 5%;
+}
 `;
 
 export default Skills;

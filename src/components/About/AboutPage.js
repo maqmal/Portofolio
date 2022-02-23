@@ -83,7 +83,7 @@ const AboutPage = () => {
                             <LoadingIcon />
                         </div>
                     </div>
-                    <div style={{ display: loading ? "none" : "block" }}>
+                    <div style={{ display: loading ? "none" : "block" }} className="mainpic-container">
                         <Tilt tiltMaxAngleY={5} tiltMaxAngleX={5} tiltReverse={true} >
                             <img src={MainPicBG} alt="" className={"img-1 "} onLoad={imageLoaded} />
                             <Tilt style={{ height: '10rem' }} tiltMaxAngleY={7} tiltMaxAngleX={7}>
@@ -129,8 +129,6 @@ const AboutPage = () => {
                                     <div className="content">
                                         <h2><AccountTreeRoundedIcon style={{ fontSize: '100px' }} /></h2>
                                         <h3>Backend Development</h3><br />
-                                        <p>"Testing leads to failure, and failure leads to understanding."</p>
-                                        <p><i>- Burt Rutan</i></p>
                                         <a onClick={() => showTechStack('box-1')} style={{ cursor: 'pointer' }} className="btn-card">
                                             <UnfoldMoreRoundedIcon /></a>
                                     </div>
@@ -154,8 +152,6 @@ const AboutPage = () => {
                                     <div className="content">
                                         <h2><ImportantDevicesOutlinedIcon style={{ fontSize: '100px' }} /></h2>
                                         <h3>Frontend Development</h3><br />
-                                        <p>"The function of a good software is to make the complex appear to be simple." </p>
-                                        <p><i>- Grady Booch</i></p>
                                         <a onClick={() => showTechStack('box-2')} style={{ cursor: 'pointer' }} className="btn-card"><UnfoldMoreRoundedIcon /></a>
                                     </div>
                                 </Tilt>
@@ -177,8 +173,6 @@ const AboutPage = () => {
                                     <div className="content">
                                         <h2><MemoryIcon style={{ fontSize: '100px' }} /></h2>
                                         <h3>Machine Learning</h3><br />
-                                        <p>"Computers are able to see, hear and learn.  Welcome to the future." </p>
-                                        <p><i>- Dave Waters</i></p>
                                         <a onClick={() => showTechStack('box-3')} style={{ cursor: 'pointer' }} className="btn-card">
                                             <UnfoldMoreRoundedIcon /></a>
                                     </div>
@@ -201,8 +195,6 @@ const AboutPage = () => {
                                     <div className="content">
                                         <h2><StorageRoundedIcon style={{ fontSize: '100px' }} /></h2>
                                         <h3>Database</h3><br />
-                                        <p>"Database: the information you lose when your memory crashes."</p>
-                                        <p><i>- Dave Barry</i></p>
                                         <a onClick={() => showTechStack('box-4')} style={{ cursor: 'pointer' }} className="btn-card">
                                             <UnfoldMoreRoundedIcon /></a>
                                     </div>
@@ -366,6 +358,7 @@ margin-top: 4rem;
     .left-content{
         margin-bottom: 2rem;
     }
+    
 }
 .icon-center{
     padding-left: 25%;
@@ -390,6 +383,10 @@ margin-top: 4rem;
         transition: filter 0.4s ease-in-out;
         filter: grayscale(100%);
         
+    }
+    
+    @media screen and (max-width:1200px){
+        margin-bottom: 50%;
     }
 }
 
@@ -437,6 +434,7 @@ margin-top: 4rem;
             -webkit-background-clip: text;
             background-clip: text;
             color: transparent;
+            font-size: 2.4vh;
         }
         p{    
             font-size: 2.4vh;

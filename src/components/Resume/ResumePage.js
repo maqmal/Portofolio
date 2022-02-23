@@ -181,6 +181,10 @@ span{
 
     font-size: 2vh;
 }
+
+@media screen and (max-width:1200px){
+    margin-left: 5%;
+}
 `
 
 export default ResumePage

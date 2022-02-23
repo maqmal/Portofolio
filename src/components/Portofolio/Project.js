@@ -41,6 +41,7 @@ const ProjectStyled = styled.div`
     align-items: center;
     flex-wrap: wrap;
     max-width: 1200px;
+    box-sizing: border-box;
 }
 a:hover {
     background: var(--grad); /* fallback for old browsers */
@@ -54,6 +55,11 @@ a:hover {
     position: relative;
     min-width: 320px;
     height: 440px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 
     background: rgba( 35, 36, 39, 0.85 );
     box-shadow: inset 5px 5px 5px rgba(0, 0, 0, 0.2),
@@ -120,6 +126,13 @@ a:hover {
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
+}
+
+@media screen and (max-width:1200px){
+    .container-about .card-about {
+        min-width: 295px;
+        
+    }
 }
 `
 

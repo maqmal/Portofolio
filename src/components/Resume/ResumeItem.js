@@ -59,7 +59,7 @@ const ResumeItemStyled = styled.div`
         .resume-text ol li{
             list-style-type: circle;
             padding-bottom: 5px;
-            font-size: 2vh;
+            font-size: 2.5vh;
         }
         h5{
             background: var(--grad); /* fallback for old browsers */
@@ -68,7 +68,6 @@ const ResumeItemStyled = styled.div`
             -webkit-background-clip: text;
             background-clip: text;
             color: transparent;
-
             font-size: 3vh;
             padding-bottom: .4rem;
         }
@@ -77,5 +76,14 @@ const ResumeItemStyled = styled.div`
             font-size: 2vh;
         }
     }
+
+@media screen and (max-width:1200px){
+    .left-content{
+        margin-left: -15%
+    }
+   .right-content{
+       width: 100%;
+   }
+}
 `;
 export default ResumeItem;
