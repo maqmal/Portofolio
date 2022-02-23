@@ -2,7 +2,6 @@ import React from 'react'
 import styled from 'styled-components';
 
 function ProgressBar({ title, width }) {
-    console.log(width)
     return (
         <ProgressBarStyled>
             <h6>{title}</h6> <span style={{fontSize:'2vh', color: 'var(--white-color)'}}>{width}</span>
