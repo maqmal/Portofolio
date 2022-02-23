@@ -49,14 +49,14 @@ const AboutPage = () => {
     const closeTechStack = (box) => {
         if (prevCountRef.current.style.transform !== 'none' && prevCountRef.current !== box) {
             prevCountRef.current.style.transform = "none";
-            const item = prevCountRef.current.childNodes[0].childNodes[0].childNodes[5].childNodes[0]
+            const item = prevCountRef.current.childNodes[0].childNodes[0].childNodes[3].childNodes[0]
             item.innerHTML = '<path d="M12 5.83l2.46 2.46c.39.39 1.02.39 1.41 0 .39-.39.39-1.02 0-1.41L12.7 3.7a.9959.9959 0 00-1.41 0L8.12 6.88c-.39.39-.39 1.02 0 1.41.39.39 1.02.39 1.41 0L12 5.83zm0 12.34l-2.46-2.46a.9959.9959 0 00-1.41 0c-.39.39-.39 1.02 0 1.41l3.17 3.18c.39.39 1.02.39 1.41 0l3.17-3.17c.39-.39.39-1.02 0-1.41a.9959.9959 0 00-1.41 0L12 18.17z"></path>'
         }
     }
 
     const showTechStack = (idName) => {
         const box = document.getElementById(idName);
-        const item = box.childNodes[0].childNodes[0].childNodes[5].childNodes[0]
+        const item = box.childNodes[0].childNodes[0].childNodes[3].childNodes[0]
         if (box.style.transform === 'none') {
             box.style.transform = "translateY(-20%)";
             item.innerHTML = '<path d="M7.41 18.59L8.83 20 12 16.83 15.17 20l1.41-1.41L12 14l-4.59 4.59zm9.18-13.18L15.17 4 12 7.17 8.83 4 7.41 5.41 12 10l4.59-4.59z"></path>'
