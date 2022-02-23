@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/portofolio/static/css/main.a89562f5.css",
-    "main.js": "/portofolio/static/js/main.6e21dcd9.js",
+    "main.js": "/portofolio/static/js/main.1c53e260.js",
     "static/media/recommerce-home.png": "/portofolio/static/media/recommerce-home.8df84cec79873c277220.png",
     "static/media/neuralkernel-home.png": "/portofolio/static/media/neuralkernel-home.36127caacbe94346409d.png",
     "static/media/recommerce-shop.png": "/portofolio/static/media/recommerce-shop.d02e67994ce9842dc5d5.png",
@@ -20,10 +20,10 @@
     "static/media/recommerce-signinsignup.png": "/portofolio/static/media/recommerce-signinsignup.03ff4c443f8a9a793483.png",
     "index.html": "/portofolio/index.html",
     "main.a89562f5.css.map": "/portofolio/static/css/main.a89562f5.css.map",
-    "main.6e21dcd9.js.map": "/portofolio/static/js/main.6e21dcd9.js.map"
+    "main.1c53e260.js.map": "/portofolio/static/js/main.1c53e260.js.map"
   },
   "entrypoints": [
     "static/css/main.a89562f5.css",
-    "static/js/main.6e21dcd9.js"
+    "static/js/main.1c53e260.js"
   ]
 }
