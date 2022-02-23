@@ -7,7 +7,11 @@ import profileBackground from '../../images/inspiration-geometry.png'
 import Switch from '@material-ui/core/Switch';
 import Brightness4Icon from '@material-ui/icons/Brightness4';
 
-const Navigation = ({ theme, themeToggler, checked }) => {
+const Navigation = ({ theme, themeToggler, checked, setNavToggle, navToggle }) => {
+    const closeNavbar = ()=>{
+        setNavToggle(!navToggle);
+        document.getElementById("cross-button").classList.remove('nav-toggle');
+    }
     return (
         <NavigationStyled>
             <div className="profile-picture">
@@ -30,19 +34,24 @@ const Navigation = ({ theme, themeToggler, checked }) => {
             </div>
             <ul className="nav-items">
                 <li className="nav-items">
-                    <NavLink style={{ textDecoration: 'none' }} exact={'true'} to="/" className={({ isActive }) => isActive ? "active-class" : ''}>Home</NavLink>
+                    <NavLink style={{ textDecoration: 'none' }} exact={'true'} to="/" className={({ isActive }) => isActive ? "active-class" : ''}
+                    onClick={()=>closeNavbar()}>Home</NavLink>
                 </li>
                 <li className="nav-items">
-                    <NavLink style={{ textDecoration: 'none' }} exact={'true'} to="/about" className={({ isActive }) => isActive ? "active-class" : ''}>About</NavLink>
+                    <NavLink style={{ textDecoration: 'none' }} exact={'true'} to="/about" className={({ isActive }) => isActive ? "active-class" : ''}
+                    onClick={()=>closeNavbar()}>About</NavLink>
                 </li>
                 <li className="nav-items">
-                    <NavLink style={{ textDecoration: 'none' }} exact={'true'} to="/resume" className={({ isActive }) => isActive ? "active-class" : ''}>Resume</NavLink>
+                    <NavLink style={{ textDecoration: 'none' }} exact={'true'} to="/resume" className={({ isActive }) => isActive ? "active-class" : ''}
+                    onClick={()=>closeNavbar()}>Resume</NavLink>
                 </li>
                 <li className="nav-items">
-                    <NavLink style={{ textDecoration: 'none' }} exact={'true'} to="/portofolio" className={({ isActive }) => isActive ? "active-class" : ''}>Projects</NavLink>
+                    <NavLink style={{ textDecoration: 'none' }} exact={'true'} to="/portofolio" className={({ isActive }) => isActive ? "active-class" : ''}
+                    onClick={()=>closeNavbar()}>Projects</NavLink>
                 </li>
                 <li className="nav-items">
-                    <NavLink style={{ textDecoration: 'none' }} exact={'true'} to="/contact" className={({ isActive }) => isActive ? "active-class" : ''}>Contact</NavLink>
+                    <NavLink style={{ textDecoration: 'none' }} exact={'true'} to="/contact" className={({ isActive }) => isActive ? "active-class" : ''}
+                    onClick={()=>closeNavbar()}>Contact</NavLink>
                 </li>
             </ul>
             <footer>
@@ -86,7 +95,7 @@ font-family: 'Poppins', sans-serif;
     text-align: center;
     .active-class{
         background-color: var(--grad);
-        color: white;
+        color: var(--white-color);
     }
     li{     
         text-decoration: none !important;

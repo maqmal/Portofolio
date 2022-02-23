@@ -4,25 +4,31 @@ import { MainLayout } from '../../styles/Layout';
 import Tilt from 'react-parallax-tilt';
 import LoadingIcon from "../Loading/LoadingIcon";
 import Title from "../Title/Title";
-import Cat from "../../images/cat.png";
-import CatBG from "../../images/cat-bg.jpg";
+import MainPic from "../../images/mainpic.png";
+import MainPicBG from "../../images/mainpic-bg.jpg";
 
 import UnfoldMoreRoundedIcon from '@material-ui/icons/UnfoldMoreRounded';
 import ImportantDevicesOutlinedIcon from '@material-ui/icons/ImportantDevicesOutlined';
 import MemoryIcon from '@material-ui/icons/Memory';
 import AccountTreeRoundedIcon from '@material-ui/icons/AccountTreeRounded';
+import StorageRoundedIcon from '@material-ui/icons/StorageRounded';
 
 import {
-    DiJavascript1,
     DiReact,
     DiNodejsSmall,
     DiPython,
     DiMongodb,
-    DiPostgresql,
-    DiHtml5,
-    DiCss3Full
+    DiPostgresql
 } from "react-icons/di";
-import { SiTensorflow, SiExpress, SiScikitlearn } from "react-icons/si";
+import {
+    SiTensorflow,
+    SiScikitlearn,
+    SiRedux,
+    SiStyledcomponents,
+    SiFirebase,
+    SiDocker,
+    SiExpress
+} from "react-icons/si";
 
 const AboutPage = () => {
     const [loading, setLoading] = useState(true);
@@ -79,9 +85,9 @@ const AboutPage = () => {
                     </div>
                     <div style={{ display: loading ? "none" : "block" }}>
                         <Tilt tiltMaxAngleY={5} tiltMaxAngleX={5} tiltReverse={true} >
-                            <img src={CatBG} alt="" className={"img-1 "} onLoad={imageLoaded} />
+                            <img src={MainPicBG} alt="" className={"img-1 "} onLoad={imageLoaded} />
                             <Tilt style={{ height: '10rem' }} tiltMaxAngleY={7} tiltMaxAngleX={7}>
-                                <img src={Cat} alt="" className={"img-2 zoom "} onLoad={imageLoaded} />
+                                <img src={MainPic} alt="" className={"img-2 zoom "} onLoad={imageLoaded} />
                             </Tilt>
                         </Tilt>
                     </div>
@@ -89,13 +95,12 @@ const AboutPage = () => {
 
                 <div className="right-content">
                     <br />
-                    <br />
                     <strong>
-                        <h1>LET ME <span> INTRODUCE </span> MYSELF 😸</h1>
+                        <h1>LET ME <span> INTRODUCE </span> MYSELF</h1>
                     </strong>
                     <div className="paragraph">
                         <p>
-                            I am <span>Aqmal</span>, an Informatics <span>fresh graduate</span> from <span>Telkom University</span>, based in <span>Bandung, Indonesia</span>.
+                            I am <span>Aqmal</span>, an Informatics <span>fresh graduate</span> from <span>Telkom University</span>, based in Bandung, <span>Indonesia</span>.
                             I am experienced in using <span>Javascript and Python </span>
                             programming language to build cool app!
                             <br /><br />
@@ -116,9 +121,9 @@ const AboutPage = () => {
             </div>
 
             <AboutStyled2>
-                <div className="container">
+                <div className="container-about">
                     <Tilt tiltMaxAngleY={15} tiltMaxAngleX={15}>
-                        <div className="card">
+                        <div className="card-about">
                             <div className="box" id="box-1" style={{ transform: 'none' }}>
                                 <Tilt tiltReverse={true} tiltMaxAngleY={8} tiltMaxAngleX={8}>
                                     <div className="content">
@@ -134,17 +139,16 @@ const AboutPage = () => {
                             </div>
                             <div className="tech-icon">
                                 <Tilt style={{ marginTop: '40%' }}>
-                                    <DiMongodb style={{ fontSize: '35px' }} className="the-icon" />
-                                    <SiExpress style={{ fontSize: '35px' }} className="the-icon" />
-                                    <DiNodejsSmall style={{ fontSize: '35px' }} className="the-icon" />
-                                    <DiPostgresql style={{ fontSize: '35px' }} className="the-icon" />
+                                    <DiNodejsSmall style={{ fontSize: '35px' }} className="the-icon" />&nbsp;
+                                    <SiExpress style={{ fontSize: '31px' }} className="the-icon" />&nbsp;
+                                    <SiDocker style={{ fontSize: '35px' }} className="the-icon" />
                                 </Tilt>
                             </div>
                         </div>
                     </Tilt>
 
                     <Tilt tiltMaxAngleY={15} tiltMaxAngleX={15}>
-                        <div className="card">
+                        <div className="card-about">
                             <div className="box" id="box-2" style={{ transform: 'none' }}>
                                 <Tilt tiltReverse={true} tiltMaxAngleY={8} tiltMaxAngleX={8}>
                                     <div className="content">
@@ -158,17 +162,16 @@ const AboutPage = () => {
                             </div>
                             <div className="tech-icon">
                                 <Tilt style={{ marginTop: '40%' }}>
-                                    <DiHtml5 style={{ fontSize: '35px' }} className="the-icon" />
-                                    <DiCss3Full style={{ fontSize: '35px' }} className="the-icon" />
-                                    <DiReact style={{ fontSize: '35px' }} className="the-icon" />
-                                    <DiJavascript1 style={{ fontSize: '35px' }} className="the-icon" />
+                                    <DiReact style={{ fontSize: '37px' }} className="the-icon" />
+                                    <SiRedux style={{ fontSize: '28px' }} className="the-icon" />
+                                    <SiStyledcomponents style={{ fontSize: '35px' }} className="the-icon" />
                                 </Tilt>
                             </div>
                         </div>
                     </Tilt>
 
                     <Tilt tiltMaxAngleY={15} tiltMaxAngleX={15}>
-                        <div className="card">
+                        <div className="card-about">
                             <div className="box" id="box-3" style={{ transform: 'none' }}>
                                 <Tilt tiltReverse={true} tiltMaxAngleY={8} tiltMaxAngleX={8}>
                                     <div className="content">
@@ -186,6 +189,30 @@ const AboutPage = () => {
                                     <DiPython style={{ fontSize: '40px' }} className="the-icon" />&nbsp;
                                     <SiTensorflow style={{ fontSize: '32px' }} className="the-icon" />&nbsp;
                                     <SiScikitlearn style={{ fontSize: '45px' }} className="the-icon" />
+                                </Tilt>
+                            </div>
+                        </div>
+                    </Tilt>
+
+                    <Tilt tiltMaxAngleY={15} tiltMaxAngleX={15}>
+                        <div className="card-about">
+                            <div className="box" id="box-4" style={{ transform: 'none' }}>
+                                <Tilt tiltReverse={true} tiltMaxAngleY={8} tiltMaxAngleX={8}>
+                                    <div className="content">
+                                        <h2><StorageRoundedIcon style={{ fontSize: '100px' }} /></h2>
+                                        <h3>Database</h3><br />
+                                        <p>"Database: the information you lose when your memory crashes."</p>
+                                        <p><i>- Dave Barry</i></p>
+                                        <a onClick={() => showTechStack('box-4')} style={{ cursor: 'pointer' }} className="btn-card">
+                                            <UnfoldMoreRoundedIcon /></a>
+                                    </div>
+                                </Tilt>
+                            </div>
+                            <div className="tech-icon">
+                                <Tilt style={{ marginTop: '50%' }}>
+                                    <DiMongodb style={{ fontSize: '32px' }} className="the-icon" />
+                                    <SiFirebase style={{ fontSize: '30px' }} className="the-icon" />
+                                    <DiPostgresql style={{ fontSize: '32px' }} className="the-icon" />
                                 </Tilt>
                             </div>
                         </div>
@@ -216,7 +243,7 @@ margin-bottom: -50%;
     }
 }
 
-.container {
+.container-about {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -226,7 +253,7 @@ margin-bottom: -50%;
     margin-left: -10%;
 }
 
-.container .card {
+.container-about .card-about {
     position: relative;
     min-width: 320px;
     height: 440px;
@@ -244,11 +271,11 @@ margin-bottom: -50%;
     transition: 0.5s;
 }
 
-.container .card:nth-child(1) .box .content a {
+.container-about .card-about:nth-child(1) .box .content a {
     background: rgba(234, 195, 138, .3);
 }
 
-.container .card .box {
+.container-about .card-about .box {
     position: absolute;
     top: 20px;
     left: 20px;
@@ -263,7 +290,7 @@ margin-bottom: -50%;
     transition: 0.5s;
 } 
 
-.container .card .box:before {
+.container-about .card-about .box:before {
     content: "";
     position: absolute;
     top: 0;
@@ -273,12 +300,12 @@ margin-bottom: -50%;
     background: rgba(255, 255, 255, 0.03);
 }
 
-.container .card .box .content {
+.container-about .card-about .box .content {
     padding: 20px;
     text-align: center;
 }
 
-.container .card .box .content h2 {
+.container-about .card-about .box .content h2 {
     position: absolute;
     top: -10px;
     right: 30px;
@@ -286,7 +313,7 @@ margin-bottom: -50%;
     color: rgba(255, 255, 255, 0.1);
 }
 
-.container .card .box .content h3 {
+.container-about .card-about .box .content h3 {
     font-size: 1.8rem;
     font-weight: 900;
     z-index: 1;
@@ -301,7 +328,7 @@ margin-bottom: -50%;
     color: transparent;
 }
 
-.container .card .box .content p {
+.container-about .card-about .box .content p {
     font-size: 1.7vh;
     font-weight: 300;
     color: #a4acc4;
@@ -312,7 +339,7 @@ margin-bottom: -50%;
     }
 }
 
-.container .card .box .content a {
+.container-about .card-about .box .content a {
     position: relative;
     display: inline-block;
     padding: 8px 20px;
@@ -324,7 +351,7 @@ margin-bottom: -50%;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
     transition: 0.5s;
 }
-.container .card .box .content a:hover {
+.container-about .card-about .box .content a:hover {
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.6);
     background: rgba(207,141,176,.4);
     color: white;
@@ -350,7 +377,7 @@ margin-top: 4rem;
     top: 0;
     left: 0;
     margin-right: -4%;
-    .img-1 {
+    .img-1 {    
         position: absolute;
     }
     .img-2 {
@@ -381,6 +408,7 @@ margin-top: 4rem;
 .right-content{
     width: 100%;
     text-align: left;
+    margin-right: 10%;
     h1{
         font-size: 4vh;
         color: var(--font-light-color);
@@ -417,20 +445,20 @@ margin-top: 4rem;
 }
 
 .arrow {
-  box-sizing: border-box;
-  height: 2vw;
-  width: 2vw;
-  border-style: solid;
-  border-color: var(--white);
-  border-width: 0px 2px 2px 0px;
-  transform: rotate(45deg);
-  transition: border-width 150ms ease-in-out;
+    box-sizing: border-box;
+    height: 2vw;
+    width: 2vw;
+    border-style: solid;
+    border-color: var(--white);
+    border-width: 0px 2px 2px 0px;
+    transform: rotate(45deg);
+    transition: border-width 150ms ease-in-out;
 }
 
 .arrow:hover {
-  border-bottom-width: 4px;
-  border-right-width: 4px;
-  cursor: pointer;
+    border-bottom-width: 4px;
+    border-right-width: 4px;
+    cursor: pointer;
 }
 `
 

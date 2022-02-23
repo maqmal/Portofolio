@@ -8,9 +8,7 @@ const Contact = () => {
         <MainLayout>
             <ContactStyled>
                 <Title title={'Contact'} span={'contact'} />
-                <div className="middle-construction">
-                    <h1>Underconstruction</h1>
-                </div>
+                
             </ContactStyled>
         </MainLayout>
     )

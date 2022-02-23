@@ -7,28 +7,28 @@ function Skills() {
         <SkillsStyled>
             <div className="skills">
                 <ProgressBar
-                    title={'HTML & CSS'}
-                    width={'90%'}
+                    title={'MERN Stack'}
+                    width={'82%'}
                 />
                 <ProgressBar
                     title={'Javascript'}
-                    width={'80%'}
+                    width={'85%'}
                 />
                 <ProgressBar
-                    title={'MERN Stack'}
-                    width={'72%'}
+                    title={'Machine Learning'}
+                    width={'80%'}
                 />
                 <ProgressBar
                     title={'Tensorflow '}
-                    width={'77%'}
+                    width={'75%'}
                 />
                 <ProgressBar
                     title={'Python'}
-                    width={'80%'}
+                    width={'85%'}
                 />
                 <ProgressBar
-                    title={'Data Science'}
-                    width={'68%'}
+                    title={'Databases'}
+                    width={'70%'}
                 />
             </div>
         </SkillsStyled>

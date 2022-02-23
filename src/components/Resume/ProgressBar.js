@@ -2,9 +2,10 @@ import React from 'react'
 import styled from 'styled-components';
 
 function ProgressBar({ title, width }) {
+    console.log(width)
     return (
         <ProgressBarStyled>
-            <h6>{title}</h6>
+            <h6>{title}</h6> <span style={{fontSize:'2vh', color: 'var(--white-color)'}}>{width}</span>
             <div className="progress-bar">
                 <div className="progress">
                     <span style={{ width: width }}></span>
@@ -37,8 +38,8 @@ h6{
             bottom: 0;
             height: 100%;
 
-            background: -webkit-linear-gradient(to right, var(--grad), #b354d9); /* Chrome 10-25, Safari 5.1-6 */
-            background: linear-gradient(to right, var(--grad), #b354d9); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+            background: -webkit-linear-gradient(to left, var(--grad), #b354d9); 
+            background: linear-gradient(to left, var(--grad), #b354d9); 
             }
         }
     }

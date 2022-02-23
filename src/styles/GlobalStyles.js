@@ -24,9 +24,9 @@ const GlobalStyle = createGlobalStyle`
     --grad: #ff9b70;
 
     --n1: #fff;
-    --n2: #fff;
+    --n2: rgb(252,252,246);
     --n3: #fff;
-    --n4: #fff;
+    --n4: rgb(252,252,246);
     --n5: rgb(252,252,246);
     --n6: rgb(255,255,255);
 }
@@ -62,7 +62,7 @@ const GlobalStyle = createGlobalStyle`
     font-size: 1.1rem;
 }
 body{
-    background: linear-gradient(to left, var(--n1) 0%, var(--n2) 18%, var(--n3) 43%, var(--n4) 52%, var(--n5) 70%, var(--n6) 100%);
+    background: linear-gradient(90deg, var(--n5) 0%, var(--n1) 18%, var(--n2) 43%, var(--n4) 52%, var(--n3) 70%, var(--n6) 100%);
     background-color: var(--background-dark-color);
     color: var(--font-light-color);
     transition: all .4s ease-in-out;
@@ -237,16 +237,6 @@ h6{
     .ham-burger-menu-nav{
         display: flex;
     }
-  }
-
-  .middle-construction{
-    h1{font-size: 2vh;}
-    padding-top: 20%;
-    justify-content: center;
-    text-align: center;
-    overflow-wrap: break-word;
-    margin: auto;
-    width: 50%;
   }
 `;
 

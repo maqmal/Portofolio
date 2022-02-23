@@ -96,14 +96,14 @@ const ResumePage = () => {
                                     </li>
                                     <li>
                                         <span>Thesis </span>involved in studying deep learning model to <span>
-                                            automatically generate music</span>.
+                                            automatically generate music</span> based on the user mood.
                                     </li>
                                     <li>
                                         Lecturer Assistant of <span> Introduction to Artificial Intelligence and </span>
                                         <span>Machine Learning lecture</span> (March 2021 - June 2021)
                                     </li>
                                     <li>
-                                        <span>Research Assistant </span> of Drone Lab in Telkom University (January 2019- December 2020).
+                                        <span>Research Assistant </span> of Drone Lab in Telkom University (January 2019 - December 2020).
                                     </li>
                                 </ol>
                             </React.Fragment>)}
@@ -114,6 +114,7 @@ const ResumePage = () => {
                 </div>
             </ResumePageStyled>
             <Skills />
+            <br/>
             <br/>
         </MainLayout>
     )

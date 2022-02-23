@@ -7,13 +7,17 @@ import CloseIcon from '@material-ui/icons/Close';
 
 function Sidebar({ navToggle, theme, themeToggler, checked, setNavToggle }) {
     return (
-        <SidebarStyled className={`${navToggle ? 'nav-toggle' : ''}`}>
+        <SidebarStyled className={`${navToggle ? 'nav-toggle' : ''}`} id="cross-button">
             <div className="ham-burger-menu-nav">
                 <IconButton onClick={() => setNavToggle(!navToggle)}>
                     <CloseIcon />
                 </IconButton>
             </div>
-            <Navigation theme={theme} themeToggler={themeToggler} checked={checked} />
+            <Navigation theme={theme} 
+            themeToggler={themeToggler} 
+            checked={checked} 
+            setNavToggle={setNavToggle} 
+            navToggle={navToggle}/>
         </SidebarStyled>
     )
 }

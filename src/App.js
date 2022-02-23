@@ -29,7 +29,7 @@ function App() {
 
   useEffect(()=>{
     const loadData = async () => {
-      await new Promise((r) => setTimeout(r, 1500));
+      await new Promise((r) => setTimeout(r, 100));
       setLoading((loading) => !loading);
     };
 
