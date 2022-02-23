@@ -11,14 +11,17 @@ const Project = ({ imgUrl, title, githubUrl }) => {
                 <div className="card-about">
                     <div className="box">
                         <div className="content">
-                            <p><a href={githubUrl} style={{textDecoration: "none"}} target="_blank">{title}</a></p>
+                            <p><a href={githubUrl} style={{ textDecoration: "none" }} target="_blank">{title}</a></p>
                             <div className="img-slide-show" style={{ maxWidth: "500px" }}>
                                 <Carousel infiniteLoop={true} autoPlay={true} showStatus={false} showIndicators={false} showThumbs={false}>
                                     {imgUrl.map((imgSrc) => (
-                                        <div>
-                                            <img className="img-slide" src={imgSrc} 
-                                            style={{ width: "210%" }} alt='' />
-                                        </div>
+
+                                        <a href={githubUrl} style={{ textDecoration: "none" }} target="_blank">
+                                            <div>
+                                                <img className="img-slide" src={imgSrc}
+                                                    style={{ width: "210%" }} alt='' />
+                                            </div>
+                                        </a>
                                     ))}
                                 </Carousel>
                             </div>
@@ -39,7 +42,14 @@ const ProjectStyled = styled.div`
     flex-wrap: wrap;
     max-width: 1200px;
 }
-
+a:hover {
+    background: var(--grad); /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, var(--grad), #b354d9); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, var(--grad), #b354d9); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
 .container-about .card-about {
     position: relative;
     min-width: 320px;
@@ -97,7 +107,6 @@ const ProjectStyled = styled.div`
 .container-about .card-about .box .content p {
     font-size: 2.7vh;
     font-weight: 900;
-    color: #a4acc4;
     z-index: 10;
     transition: 0.5s;
     margin-top: -80%;
@@ -105,6 +114,12 @@ const ProjectStyled = styled.div`
     i{   
         font-size: 2vh;
     }
+    background: var(--grad); /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, var(--grad), #b354d9); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, var(--grad), #b354d9); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
 }
 `
 

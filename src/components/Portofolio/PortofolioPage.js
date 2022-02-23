@@ -11,7 +11,7 @@ const PortofolioPage = () => {
         window.scrollTo(0, 0);
     }, []);
 
-    const [webOpened, setWebOpened] = useState(false);
+    const [webOpened, setWebOpened] = useState(true);
     const [MLOpened, setMLOpened] = useState(false);
 
     function toggleWeb() {

@@ -3,29 +3,41 @@ import styled from "styled-components";
 import { MainLayout } from '../../styles/Layout';
 import Title from "../Title/Title";
 
-import PhoneIcon from '@material-ui/icons/Phone';
-import EmailIcon from '@material-ui/icons/Email';
-import LocationOnIcon from '@material-ui/icons/LocationOn';
-import ContactItem from './ContactItem';
+import PrimaryButton from "./PrimaryButton";
 
-
-const Contact = () => {
-    const phone = <PhoneIcon />
-    const email = <EmailIcon />
-    const location = <LocationOnIcon />
+const ContactForm = () => {
     return (
         <MainLayout>
             <ContactStyled>
                 <Title title={'Contact'} span={'contact'} />
-                <section className='contact-section'>
-                    
-                    <div className="right-content">
-                        <ContactItem title={'Phone'} icon={phone} cont1={'+62-8213-439-6679'}/>
-                        <ContactItem title={'Email'} icon={email} cont1={'pangestu@gmail.com'}/>
-                        <ContactItem title={'Address'} icon={location} cont1={'Bandung, West Java, Indonesia'}/>
-
+                <div className={'contact-section'}>
+                    <div className="left-content">
+                        <div className="contact-title">
+                            <h6>Get in Touch!</h6>
+                        </div>
+                        <form className="form">
+                            <div className="form-field">
+                                <label htmlFor="name"  >Enter your name*</label>
+                                <input type="text" id="name" />
+                            </div>
+                            <div className="form-field">
+                                <label htmlFor="email"  >Enter your email*</label>
+                                <input type="email" id="email" />
+                            </div>
+                            <div className="form-field">
+                                <label htmlFor="subject"  >Enter your subject</label>
+                                <input type="text" id="subject" />
+                            </div>
+                            <div className="form-field">
+                                <label htmlFor="text-area">Enter your Message*</label>
+                                <textarea name="textarea" id="textarea" cols="30" rows="10"></textarea>
+                            </div>
+                            <div className="form-field f-button">
+                                <PrimaryButton title={'Send Email'} />
+                            </div>
+                        </form>
                     </div>
-                </section>
+                </div>
             </ContactStyled>
 
         </MainLayout>
@@ -34,21 +46,17 @@ const Contact = () => {
 
 const ContactStyled = styled.section`
 .contact-section{
-    margin-top: 6%;
+    margin-top: 5%;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-column-gap: 2rem;
+    .left-content{
+        margin-right: -200px;
+    }
     @media screen and (max-width: 978px){
         grid-template-columns: repeat(1, 1fr);
         .f-button{
             margin-bottom: 3rem;
-        }
-    }
-    .right-content{
-        display: grid;
-        grid-template-columns: repeat(1, 1fr);
-        @media screen and (max-width: 502px){
-            width: 70%;
         }
     }
     .contact-title{
@@ -99,4 +107,4 @@ const ContactStyled = styled.section`
 }
 `
 
-export default Contact;
+export default ContactForm

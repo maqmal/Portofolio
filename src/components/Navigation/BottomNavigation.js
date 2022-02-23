@@ -36,9 +36,9 @@ const BottomNavigation = ({ theme, themeToggler }) => {
 
                 <BottomNavigationAction
                     component={Link}
-                    to="/about"
-                    label="About"
-                    value="about"
+                    to="/resume"
+                    label="Resume"
+                    value="resume"
                     icon={<AccountCircleIcon style={{ fontSize: '3.2vh', color:'var(--white-color)' }} />}
                 />
                 

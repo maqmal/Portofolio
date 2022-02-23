@@ -28,6 +28,23 @@ const ResumePage = () => {
                 </div>
                 <div className="resume-content">
                     <ResumeItem
+                        year={'February 2022 - Now'}
+                        title={'Generasi GIGIH 2.0 - Backend Engineer Track'}
+                        subTitle={'Yayasan Anak Bangsa Bisa'}
+                        text={(
+                            <React.Fragment>
+                                <p style={{ fontSize: '2vh' }}>Generasi GIGIH was designed by the <span>Anak Bangsa Bisa Foundation </span>
+                                    and <span>GoTo</span> as a solution
+                                    for young Indonesian technology talents to keep up with the fast-growing technology industry.</p>
+                                <ol>
+                                    <li>
+                                        Participate in the <span>Backend Engineer</span> Learning Path.
+                                    </li>
+                                </ol>
+                            </React.Fragment>
+                        )}
+                    />
+                    <ResumeItem
                         year={'November 2021'}
                         title={'2nd International Conference on Computer Science and Engineering (IC2SE)'}
                         subTitle={'UPI YPTK'}
@@ -46,7 +63,7 @@ const ResumePage = () => {
                     />
                     <ResumeItem
                         year={'November 2021'}
-                        title={'Machine Learning Tech Titan League Competition'}
+                        title={'Finalist - Machine Learning Tech Titan League Competition'}
                         subTitle={'Telkomsel'}
                         text={(
                             <React.Fragment>
@@ -56,6 +73,25 @@ const ResumePage = () => {
                                     </li>
                                     <li>
                                         The competition is about <span>solving machine learning question</span> and <span> create image classification model</span>.
+                                    </li>
+                                </ol>
+                            </React.Fragment>
+                        )}
+                    />
+                    <ResumeItem
+                        year={'July 2021 - September 2021'}
+                        title={'Fresh Graduate Academy - Microsoft Fundamental'}
+                        subTitle={'Digital Talent Scholarship'}
+                        text={(
+                            <React.Fragment>
+                                <p style={{ fontSize: '2vh' }}>The Fresh Graduate Academy Digital Talent Scholarship (FGA DTS) is a training program to
+                                    prepare graduates who have not or are not currently working to have professional competence.</p>
+                                <ol>
+                                    <li>
+                                        Participate in the <span>Microsoft Fundamental </span> Learning Path.
+                                    </li>
+                                    <li>
+                                        Learned the concept of <span>Cloud Computing</span> and taken the <span>Azure Certification</span> Badge in the Microsoft Learn Portal.
                                     </li>
                                 </ol>
                             </React.Fragment>
@@ -85,14 +121,17 @@ const ResumePage = () => {
                 </div>
                 <div className="resume-content ">
                     <ResumeItem
-                        year={'August 2018 - Now'}
+                        year={'August 2018 - March 2022'}
                         title={'Telkom University'}
                         subTitle={'Bachelor in Informatics'}
                         text={(
                             <React.Fragment>
                                 <ol>
                                     <li>
-                                        GPA: 3.52/4
+                                        <span>Cumlaude Graduate </span>🎊
+                                    </li>
+                                    <li>
+                                        GPA: 3.55/4
                                     </li>
                                     <li>
                                         <span>Thesis </span>involved in studying deep learning model to <span>
@@ -114,8 +153,8 @@ const ResumePage = () => {
                 </div>
             </ResumePageStyled>
             <Skills />
-            <br/>
-            <br/>
+            <br />
+            <br />
         </MainLayout>
     )
 }
