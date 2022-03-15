@@ -27,7 +27,23 @@ const ResumePage = () => {
                     <SmallTitle icon={briefcase} title={'Experience'} />
                 </div>
                 <div className="resume-content">
-                    
+                    {/* <ResumeItem
+                        year={'February 2022 - Now'}
+                        title={'Generasi GIGIH 2.0 - Backend Engineer Track'}
+                        subTitle={'Yayasan Anak Bangsa Bisa'}
+                        text={(
+                            <React.Fragment>
+                                <p style={{ fontSize: '2vh' }}>Generasi GIGIH was designed by the <span>Anak Bangsa Bisa Foundation </span>
+                                    and <span>GoTo</span> as a solution
+                                    for young Indonesian technology talents to keep up with the fast-growing technology industry.</p>
+                                <ol>
+                                    <li>
+                                        Participate in the <span>Backend Engineer</span> Learning Path.
+                                    </li>
+                                </ol>
+                            </React.Fragment>
+                        )}
+                    /> */}
                     <ResumeItem
                         year={'November 2021'}
                         title={'2nd International Conference on Computer Science and Engineering (IC2SE)'}
@@ -115,7 +131,7 @@ const ResumePage = () => {
                                         <span>Cumlaude Graduate </span>🎊
                                     </li>
                                     <li>
-                                        GPA: 3.55/4
+                                        GPA: 3.54/4
                                     </li>
                                     <li>
                                         <span>Thesis </span>involved in studying deep learning model to <span>
