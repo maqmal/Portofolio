@@ -18,7 +18,8 @@ import {
     DiNodejsSmall,
     DiPython,
     DiMongodb,
-    DiPostgresql
+    DiPostgresql,
+    DiJava
 } from "react-icons/di";
 import {
     SiTensorflow,
@@ -26,7 +27,6 @@ import {
     SiRedux,
     SiStyledcomponents,
     SiFirebase,
-    SiDocker,
     SiExpress
 } from "react-icons/si";
 
@@ -139,7 +139,7 @@ const AboutPage = () => {
                                 <Tilt style={{ marginTop: '40%' }}>
                                     <DiNodejsSmall style={{ fontSize: '35px' }} className="the-icon" />&nbsp;
                                     <SiExpress style={{ fontSize: '31px' }} className="the-icon" />&nbsp;
-                                    <SiDocker style={{ fontSize: '35px' }} className="the-icon" />
+                                    <DiJava style={{ fontSize: '41px' }} className="the-icon" />
                                 </Tilt>
                             </div>
                         </div>

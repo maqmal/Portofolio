@@ -30,9 +30,9 @@ const HomePage = () => {
                         className='normal-mode'
                         cursor={true}
                         sequence={[
-                            'Web Developer 😎',
+                            'Software Engineer 😎',
                             2000,
-                            'Machine Learning Developer 🤖',
+                            'Machine Learning Enthusiast 🤖',
                             2000,
                             'Freshgraduate 🤓',
                             2000,
@@ -44,9 +44,9 @@ const HomePage = () => {
                         className='mobile-mode'
                         cursor={true}
                         sequence={[
-                            'Web Developer 😎',
+                            'Software Engineer 😎',
                             2000,
-                            'ML Developer 🤖',
+                            'ML Enthusiast 🤖',
                             2000,
                             'Freshgraduate 🤓',
                             2000,

@@ -7,7 +7,7 @@ function Skills() {
         <SkillsStyled>
             <div className="skills">
                 <ProgressBar
-                    title={'MERN Stack'}
+                    title={'Java'}
                     width={'82%'}
                 />
                 <ProgressBar

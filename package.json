@@ -1,7 +1,7 @@
 {
-  "name": "portofolio",
+  "name": "portfolio",
   "version": "0.1.0",
-  "homepage": "https://maqmal.github.io/portofolio",
+  "homepage": "https://maqmal.github.io/portfolio",
   "private": false,
   "dependencies": {
     "@material-ui/core": "^4.12.3",
