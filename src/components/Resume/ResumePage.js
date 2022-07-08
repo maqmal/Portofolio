@@ -28,13 +28,20 @@ const ResumePage = () => {
                 </div>
                 <div className="resume-content">
                     <ResumeItem
-                        year={'April 2022 - Now'}
+                        year={'April 2022 - July 2022'}
                         title={'Software Engineer - Backend'}
                         subTitle={'Traveloka'}
                         text={(
                             <React.Fragment>
-                                <p style={{ fontSize: '2vh' }}>Working at <span>Traveloka </span>
-                                    as <span>Software Engineer (Backend)</span>.</p>
+                                <p style={{ fontSize: '2vh' }}>Working at <span>Traveloka Eats</span> backend team.</p>
+                                <ol>
+                                    <li>
+                                        Help engineering team to maintain and develop one of Traveloka core product.
+                                    </li>
+                                    <li>
+                                        Create and testing business operation application to help product team achieve their goal.
+                                    </li>
+                                </ol>
                             </React.Fragment>
                         )}
                     />
