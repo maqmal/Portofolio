@@ -33,13 +33,13 @@ const ResumePage = () => {
                         subTitle={'Traveloka'}
                         text={(
                             <React.Fragment>
-                                <p style={{ fontSize: '2vh' }}>Working at <span>Traveloka Eats</span> backend team.</p>
+                                <p style={{ fontSize: '2vh' }}>Working at <span>Traveloka</span> backend team.</p>
                                 <ol>
                                     <li>
-                                        Help engineering team to maintain and develop one of Traveloka core product.
+                                        Help the team to review and refactor some of the postgreSQL code to achieve faster execution time.
                                     </li>
                                     <li>
-                                        Create and testing business operation application to help product team achieve their goal.
+                                        Create and testing business logic API and create RPC using internal Java framework.
                                     </li>
                                 </ol>
                             </React.Fragment>
