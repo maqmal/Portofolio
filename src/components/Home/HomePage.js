@@ -30,11 +30,11 @@ const HomePage = () => {
                         className='normal-mode'
                         cursor={true}
                         sequence={[
-                            'Software Engineer 😎',
+                            'Fullstack Software Developer 😎',
                             2000,
                             'Machine Learning Enthusiast 🤖',
                             2000,
-                            'Freshgraduate 🤓',
+                            'Magician 🧙',
                             2000,
                         ]}
                         wrapper="p"
@@ -44,11 +44,11 @@ const HomePage = () => {
                         className='mobile-mode'
                         cursor={true}
                         sequence={[
-                            'Software Engineer 😎',
+                            'Fullstack Software Developer 😎',
                             2000,
                             'ML Enthusiast 🤖',
                             2000,
-                            'Freshgraduate 🤓',
+                            'Magician 🧙',
                             2000,
                         ]}
                         wrapper="p"

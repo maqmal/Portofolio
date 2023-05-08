@@ -8,6 +8,7 @@ import MainPic from "../../images/mainpic.png";
 import MainPicBG from "../../images/mainpic-bg.jpg";
 
 import UnfoldMoreRoundedIcon from '@material-ui/icons/UnfoldMoreRounded';
+import CloudIcon from '@material-ui/icons/Cloud';
 import ImportantDevicesOutlinedIcon from '@material-ui/icons/ImportantDevicesOutlined';
 import MemoryIcon from '@material-ui/icons/Memory';
 import AccountTreeRoundedIcon from '@material-ui/icons/AccountTreeRounded';
@@ -19,15 +20,16 @@ import {
     DiPython,
     DiMongodb,
     DiPostgresql,
-    DiJava
+    DiDotnet
 } from "react-icons/di";
 import {
     SiTensorflow,
-    SiScikitlearn,
+    SiOpenai,
     SiRedux,
-    SiStyledcomponents,
-    SiFirebase,
-    SiExpress
+    SiVuedotjs,
+    SiExpress,
+    SiMicrosoftsharepoint,
+    SiMicrosoftazure
 } from "react-icons/si";
 
 const AboutPage = () => {
@@ -100,13 +102,11 @@ const AboutPage = () => {
                     </strong>
                     <div className="paragraph">
                         <p>
-                            I am <span>Aqmal</span>, an Informatics <span>fresh graduate</span> from <span>Telkom University</span>, based in Bandung, <span>Indonesia</span>.
-                            I am experienced in using <span>Javascript and Python </span>
-                            programming language to build cool app!
+                            I am <span>Aqmal</span>, a <span>fullstack</span> software developer graduated from <span>Telkom University</span>, based in Bandung, <span>Indonesia</span>.
+                            I am currently working fulltime at <span>Deloitte</span> but open to freelance/side job as fullstack developer.
                             <br /><br />
-                            During the pandemic, I like to use my free time to learn
-                            <span> modern javascript framework </span>such as <span>Node.js, React.js, </span>
-                            and apply my knowledge of Deep Learning using <span>Tensorflow</span>.
+                            With expertise in  <span> modern javascript framework </span>such as <span>Node.js, React.js, </span> to build a high performance website and also <span>Python </span>
+                            for machine learning and data science application, your business problem and need can be solved with the help of software <span>magic!</span>
                             <br /><br />
                         </p>
                         <center>
@@ -139,7 +139,7 @@ const AboutPage = () => {
                                 <Tilt style={{ marginTop: '40%' }}>
                                     <DiNodejsSmall style={{ fontSize: '35px' }} className="the-icon" />&nbsp;
                                     <SiExpress style={{ fontSize: '31px' }} className="the-icon" />&nbsp;
-                                    <DiJava style={{ fontSize: '41px' }} className="the-icon" />
+                                    <DiDotnet style={{ fontSize: '41px' }} className="the-icon" />
                                 </Tilt>
                             </div>
                         </div>
@@ -158,9 +158,9 @@ const AboutPage = () => {
                             </div>
                             <div className="tech-icon">
                                 <Tilt style={{ marginTop: '40%' }}>
-                                    <DiReact style={{ fontSize: '37px' }} className="the-icon" />
-                                    <SiRedux style={{ fontSize: '28px' }} className="the-icon" />
-                                    <SiStyledcomponents style={{ fontSize: '35px' }} className="the-icon" />
+                                    <DiReact style={{ fontSize: '37px' }} className="the-icon" />&nbsp;
+                                    <SiRedux style={{ fontSize: '28px' }} className="the-icon" />&nbsp;
+                                    <SiVuedotjs style={{ fontSize: '32px' }} className="the-icon" />
                                 </Tilt>
                             </div>
                         </div>
@@ -182,7 +182,7 @@ const AboutPage = () => {
                                 <Tilt style={{ marginTop: '20%' }}>
                                     <DiPython style={{ fontSize: '40px' }} className="the-icon" />&nbsp;
                                     <SiTensorflow style={{ fontSize: '32px' }} className="the-icon" />&nbsp;
-                                    <SiScikitlearn style={{ fontSize: '45px' }} className="the-icon" />
+                                    <SiOpenai style={{ fontSize: '34px' }} className="the-icon" />
                                 </Tilt>
                             </div>
                         </div>
@@ -194,7 +194,7 @@ const AboutPage = () => {
                                 <Tilt tiltReverse={true} tiltMaxAngleY={8} tiltMaxAngleX={8}>
                                     <div className="content">
                                         <h2><StorageRoundedIcon style={{ fontSize: '100px' }} /></h2>
-                                        <h3>Database</h3><br />
+                                        <h3>Databases</h3><br />
                                         <a onClick={() => showTechStack('box-4')} style={{ cursor: 'pointer' }} className="btn-card">
                                             <UnfoldMoreRoundedIcon /></a>
                                     </div>
@@ -202,9 +202,29 @@ const AboutPage = () => {
                             </div>
                             <div className="tech-icon">
                                 <Tilt style={{ marginTop: '50%' }}>
-                                    <DiMongodb style={{ fontSize: '32px' }} className="the-icon" />
-                                    <SiFirebase style={{ fontSize: '30px' }} className="the-icon" />
-                                    <DiPostgresql style={{ fontSize: '32px' }} className="the-icon" />
+                                    <DiMongodb style={{ fontSize: '36px' }} className="the-icon" />&nbsp;
+                                    <DiPostgresql style={{ fontSize: '36px' }} className="the-icon" />
+                                </Tilt>
+                            </div>
+                        </div>
+                    </Tilt>
+
+                    <Tilt tiltMaxAngleY={15} tiltMaxAngleX={15}>
+                        <div className="card-about">
+                            <div className="box" id="box-5" style={{ transform: 'none' }}>
+                                <Tilt tiltReverse={true} tiltMaxAngleY={8} tiltMaxAngleX={8}>
+                                    <div className="content">
+                                        <h2><CloudIcon style={{ fontSize: '100px' }} /></h2>
+                                        <h3>MS Power Platform</h3><br />
+                                        <a onClick={() => showTechStack('box-5')} style={{ cursor: 'pointer' }} className="btn-card">
+                                            <UnfoldMoreRoundedIcon /></a>
+                                    </div>
+                                </Tilt>
+                            </div>
+                            <div className="tech-icon">
+                                <Tilt style={{ marginTop: '50%' }}>
+                                    <SiMicrosoftsharepoint style={{ fontSize: '36px' }} className="the-icon" />&nbsp;
+                                    <SiMicrosoftazure style={{ fontSize: '35px' }} className="the-icon" />&nbsp;
                                 </Tilt>
                             </div>
                         </div>

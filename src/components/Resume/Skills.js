@@ -6,8 +6,9 @@ function Skills() {
     return (
         <SkillsStyled>
             <div className="skills">
+                <p><i>This is the tech stack that I use or learn right now.</i></p><br/>
                 <ProgressBar
-                    title={'Java'}
+                    title={'Typescript'}
                     width={'82%'}
                 />
                 <ProgressBar
@@ -15,19 +16,19 @@ function Skills() {
                     width={'85%'}
                 />
                 <ProgressBar
-                    title={'Machine Learning'}
+                    title={'Machine Learning & Data Science'}
                     width={'80%'}
                 />
                 <ProgressBar
-                    title={'Tensorflow '}
-                    width={'75%'}
+                    title={'Power Automate & Power Apps'}
+                    width={'65%'}
                 />
                 <ProgressBar
                     title={'Python'}
                     width={'85%'}
                 />
                 <ProgressBar
-                    title={'Databases'}
+                    title={'PostgreSQL'}
                     width={'70%'}
                 />
             </div>
@@ -37,6 +38,7 @@ function Skills() {
 
 const SkillsStyled = styled.section`
     .skills{
+        margin-top: -3rem;
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         grid-row-gap: 2rem;

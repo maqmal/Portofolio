@@ -18,7 +18,7 @@ justify-content: center;
 padding-bottom: 20px;
 
 img{
-    max-width: 150%;
+    max-width: 100%;
     border-radius: 50%;
     margin-bottom: 1rem;
     transition: filter 0.4s ease-in-out;

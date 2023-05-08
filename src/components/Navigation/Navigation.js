@@ -73,7 +73,7 @@ font-family: 'Poppins', sans-serif;
     width: 100%;
     text-align: center;
     padding: 2rem 0;
-    margin-bottom: -3rem;
+    margin-bottom: -6rem;
     img{
         width: 70%;
         border-radius: 50%;

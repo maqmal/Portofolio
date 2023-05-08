@@ -28,6 +28,7 @@ const PortofolioPage = () => {
         <MainLayout>
             <PortofolioPageStyled>
                 <Title title={'Projects'} span={'Projects'} />
+                <p><i>Sample of my past projects. <br/>Right now I'm mainly use: React.js, Node.js, Python, and Microsoft Power Platform <br/>but it can't be shared because of confidentiality reasons. </i></p>
                 <div className="button-section">
                     <div className='button'>
                         <div onClick={toggleWeb}>
@@ -56,6 +57,9 @@ const PortofolioPage = () => {
 const PortofolioPageStyled = styled.section`
 display: flex;
 flex-direction: column;
+i{
+    font-size: 1.5vh;
+}
 .button-section{
     margin-top: 5%;
     width: 40vw;
