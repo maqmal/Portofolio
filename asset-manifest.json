@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/portfolio/static/css/main.a89562f5.css",
-    "main.js": "/portfolio/static/js/main.a1498c0b.js",
+    "main.js": "/portfolio/static/js/main.6c95bf91.js",
     "static/media/recommerce-home.png": "/portfolio/static/media/recommerce-home.8df84cec79873c277220.png",
     "static/media/neuralkernel-home.png": "/portfolio/static/media/neuralkernel-home.36127caacbe94346409d.png",
     "static/media/recommerce-shop.png": "/portfolio/static/media/recommerce-shop.d02e67994ce9842dc5d5.png",
@@ -10,20 +10,20 @@
     "static/media/ml-weth1.png": "/portfolio/static/media/ml-weth1.89a9bf7317196bc43e34.png",
     "static/media/ml-glaucoma1.png": "/portfolio/static/media/ml-glaucoma1.c5f52fc4a199eebe8bbe.png",
     "static/media/ml-nlp2.png": "/portfolio/static/media/ml-nlp2.dba8bb98c5f4872c7b13.png",
+    "static/media/pp.png": "/portfolio/static/media/pp.5487cfc3529cc1525fd1.png",
     "static/media/recommerce-signin-google.png": "/portfolio/static/media/recommerce-signin-google.6def5d662933be7d69de.png",
     "static/media/ml-nlp1.png": "/portfolio/static/media/ml-nlp1.19560dcbac97522a5988.png",
     "static/media/ml-rec2.png": "/portfolio/static/media/ml-rec2.573bc3b1ba3bf053b957.png",
     "static/media/ml-piano2.jpg": "/portfolio/static/media/ml-piano2.fbc26afa24f59dc234b7.jpg",
-    "static/media/pp.png": "/portfolio/static/media/pp.b78b54ab1e11f8a0f40e.png",
     "static/media/ml-weth2.png": "/portfolio/static/media/ml-weth2.504f382b6b654805690f.png",
     "static/media/ml-rec1.png": "/portfolio/static/media/ml-rec1.00ab25292a7eac2f4605.png",
     "static/media/recommerce-signinsignup.png": "/portfolio/static/media/recommerce-signinsignup.03ff4c443f8a9a793483.png",
     "index.html": "/portfolio/index.html",
     "main.a89562f5.css.map": "/portfolio/static/css/main.a89562f5.css.map",
-    "main.a1498c0b.js.map": "/portfolio/static/js/main.a1498c0b.js.map"
+    "main.6c95bf91.js.map": "/portfolio/static/js/main.6c95bf91.js.map"
   },
   "entrypoints": [
     "static/css/main.a89562f5.css",
-    "static/js/main.a1498c0b.js"
+    "static/js/main.6c95bf91.js"
   ]
 }
