@@ -98,7 +98,7 @@ const AboutPage = () => {
                 <div className="right-content">
                     <br />
                     <strong>
-                        <h1>LET ME <span> INTRODUCE </span> MYSELF</h1>
+                        <h1>~ <span>Introduction</span> ~</h1>
                     </strong>
                     <div className="paragraph">
                         <p>

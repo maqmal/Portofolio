@@ -166,15 +166,21 @@ const ResumePage = () => {
                                         GPA: 3.54/4
                                     </li>
                                     <li>
+                                        <span>PUBLICATION:</span> <a href="https://ieeexplore.ieee.org/document/9791928" target="_blank" rel="noopener noreferrer">Generating Music with Emotion Using Transformer</a>
+                                    </li>
+                                    <li>
                                         <span>Thesis </span>involved in studying deep learning model to <span>
-                                            automatically generate music</span> based on the user mood.
+                                            automatically generate music.</span>
+                                    </li>
+                                    <li>
+                                        Focused on web development and AI, with a strong interest in <span>web development</span> that <span>integrate AI technologies.</span>
                                     </li>
                                     <li>
                                         Lecturer Assistant of <span> Introduction to Artificial Intelligence and </span>
-                                        <span>Machine Learning lecture</span> (March 2021 - June 2021)
+                                        <span>Machine Learning lecture</span>
                                     </li>
                                     <li>
-                                        <span>Research Assistant </span> of Drone Lab in Telkom University (January 2019 - December 2020).
+                                        Served as a <span>research assistant </span> in laboratory focused on drone research. Collaborated with cross-functional teams to develop and deliver successful drone research projects and maintain laboratory assets.
                                     </li>
                                 </ol>
                             </React.Fragment>)}
@@ -201,6 +207,10 @@ margin-top: 5%;
 }
 .resume-content{
     border-left: 2px solid var(--border-color);
+}
+a{
+
+    font-size: 2.4vh;
 }
 
 span{    

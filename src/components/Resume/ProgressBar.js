@@ -16,7 +16,7 @@ function ProgressBar({ title, width }) {
 
 const ProgressBarStyled = styled.div`
 h6{
-    font-size: 2.5vh;
+    font-size: 2vh;
 }
 .progress-bar{
     display: flex;

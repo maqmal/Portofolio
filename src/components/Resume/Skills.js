@@ -16,19 +16,19 @@ function Skills() {
                     width={'85%'}
                 />
                 <ProgressBar
-                    title={'Machine Learning & Data Science'}
+                    title={'Front-End Development (React.js, Redux, CSS, Material UI)'}
                     width={'80%'}
                 />
                 <ProgressBar
-                    title={'Power Automate & Power Apps'}
+                    title={'Power Platform (Power Automate, Power Apps, Sharepoint)'}
                     width={'65%'}
                 />
                 <ProgressBar
-                    title={'Python'}
+                    title={'Python (Machine Learning, Web-Crawler, Web-Automation)'}
                     width={'85%'}
                 />
                 <ProgressBar
-                    title={'PostgreSQL'}
+                    title={'Back-End Development (Node.js, PostgreSQL, C#, .NET)'}
                     width={'70%'}
                 />
             </div>
