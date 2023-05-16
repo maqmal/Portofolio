@@ -28,7 +28,7 @@ const PortofolioPage = () => {
         <MainLayout>
             <PortofolioPageStyled>
                 <Title title={'Projects'} span={'Projects'} />
-                <p><i>Sample of my past projects. <br/>Right now I'm mainly use: React.js, Node.js, Python, and Microsoft Power Platform <br/>but it can't be shared because of confidentiality reasons. </i></p>
+                <p><i>Sample of my past projects. <br/>Right now I'm mainly use: React.js, Node.js, Python, and Microsoft Power Platform <br/>A lot of my current projects can't be shared because of confidentiality reasons. </i></p>
                 <div className="button-section">
                     <div className='button'>
                         <div onClick={toggleWeb}>

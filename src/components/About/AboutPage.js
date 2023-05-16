@@ -129,8 +129,8 @@ const AboutPage = () => {
                                     <div className="content">
                                         <h2><AccountTreeRoundedIcon style={{ fontSize: '100px' }} /></h2>
                                         <h3>Backend Development</h3><br />
-                                        <a onClick={() => showTechStack('box-1')} style={{ cursor: 'pointer' }} className="btn-card">
-                                            <UnfoldMoreRoundedIcon /></a>
+                                        {/* <a onClick={() => showTechStack('box-1')} style={{ cursor: 'pointer' }} className="btn-card">
+                                            <UnfoldMoreRoundedIcon /></a> */}
                                     </div>
 
                                 </Tilt>
@@ -152,7 +152,7 @@ const AboutPage = () => {
                                     <div className="content">
                                         <h2><ImportantDevicesOutlinedIcon style={{ fontSize: '100px' }} /></h2>
                                         <h3>Frontend Development</h3><br />
-                                        <a onClick={() => showTechStack('box-2')} style={{ cursor: 'pointer' }} className="btn-card"><UnfoldMoreRoundedIcon /></a>
+                                        {/* <a onClick={() => showTechStack('box-2')} style={{ cursor: 'pointer' }} className="btn-card"><UnfoldMoreRoundedIcon /></a> */}
                                     </div>
                                 </Tilt>
                             </div>
@@ -173,8 +173,8 @@ const AboutPage = () => {
                                     <div className="content">
                                         <h2><MemoryIcon style={{ fontSize: '100px' }} /></h2>
                                         <h3>Machine Learning</h3><br />
-                                        <a onClick={() => showTechStack('box-3')} style={{ cursor: 'pointer' }} className="btn-card">
-                                            <UnfoldMoreRoundedIcon /></a>
+                                        {/* <a onClick={() => showTechStack('box-3')} style={{ cursor: 'pointer' }} className="btn-card">
+                                            <UnfoldMoreRoundedIcon /></a> */}
                                     </div>
                                 </Tilt>
                             </div>
@@ -195,8 +195,8 @@ const AboutPage = () => {
                                     <div className="content">
                                         <h2><StorageRoundedIcon style={{ fontSize: '100px' }} /></h2>
                                         <h3>Databases</h3><br />
-                                        <a onClick={() => showTechStack('box-4')} style={{ cursor: 'pointer' }} className="btn-card">
-                                            <UnfoldMoreRoundedIcon /></a>
+                                        {/* <a onClick={() => showTechStack('box-4')} style={{ cursor: 'pointer' }} className="btn-card">
+                                            <UnfoldMoreRoundedIcon /></a> */}
                                     </div>
                                 </Tilt>
                             </div>
@@ -216,8 +216,8 @@ const AboutPage = () => {
                                     <div className="content">
                                         <h2><CloudIcon style={{ fontSize: '100px' }} /></h2>
                                         <h3>MS Power Platform</h3><br />
-                                        <a onClick={() => showTechStack('box-5')} style={{ cursor: 'pointer' }} className="btn-card">
-                                            <UnfoldMoreRoundedIcon /></a>
+                                        {/* <a onClick={() => showTechStack('box-5')} style={{ cursor: 'pointer' }} className="btn-card">
+                                            <UnfoldMoreRoundedIcon /></a> */}
                                     </div>
                                 </Tilt>
                             </div>
