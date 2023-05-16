@@ -135,13 +135,13 @@ const AboutPage = () => {
 
                                 </Tilt>
                             </div>
-                            <div className="tech-icon">
+                            {/* <div className="tech-icon">
                                 <Tilt style={{ marginTop: '40%' }}>
                                     <DiNodejsSmall style={{ fontSize: '35px' }} className="the-icon" />&nbsp;
                                     <SiExpress style={{ fontSize: '31px' }} className="the-icon" />&nbsp;
                                     <DiDotnet style={{ fontSize: '41px' }} className="the-icon" />
                                 </Tilt>
-                            </div>
+                            </div> */}
                         </div>
                     </Tilt>
 
@@ -156,13 +156,13 @@ const AboutPage = () => {
                                     </div>
                                 </Tilt>
                             </div>
-                            <div className="tech-icon">
+                            {/* <div className="tech-icon">
                                 <Tilt style={{ marginTop: '40%' }}>
                                     <DiReact style={{ fontSize: '37px' }} className="the-icon" />&nbsp;
                                     <SiRedux style={{ fontSize: '28px' }} className="the-icon" />&nbsp;
                                     <SiVuedotjs style={{ fontSize: '32px' }} className="the-icon" />
                                 </Tilt>
-                            </div>
+                            </div> */}
                         </div>
                     </Tilt>
 
@@ -178,13 +178,13 @@ const AboutPage = () => {
                                     </div>
                                 </Tilt>
                             </div>
-                            <div className="tech-icon">
+                            {/* <div className="tech-icon">
                                 <Tilt style={{ marginTop: '20%' }}>
                                     <DiPython style={{ fontSize: '40px' }} className="the-icon" />&nbsp;
                                     <SiTensorflow style={{ fontSize: '32px' }} className="the-icon" />&nbsp;
                                     <SiOpenai style={{ fontSize: '34px' }} className="the-icon" />
                                 </Tilt>
-                            </div>
+                            </div> */}
                         </div>
                     </Tilt>
 
@@ -200,12 +200,12 @@ const AboutPage = () => {
                                     </div>
                                 </Tilt>
                             </div>
-                            <div className="tech-icon">
+                            {/* <div className="tech-icon">
                                 <Tilt style={{ marginTop: '50%' }}>
                                     <DiMongodb style={{ fontSize: '36px' }} className="the-icon" />&nbsp;
                                     <DiPostgresql style={{ fontSize: '36px' }} className="the-icon" />
                                 </Tilt>
-                            </div>
+                            </div> */}
                         </div>
                     </Tilt>
 
@@ -221,12 +221,12 @@ const AboutPage = () => {
                                     </div>
                                 </Tilt>
                             </div>
-                            <div className="tech-icon">
+                            {/* <div className="tech-icon">
                                 <Tilt style={{ marginTop: '50%' }}>
                                     <SiMicrosoftsharepoint style={{ fontSize: '36px' }} className="the-icon" />&nbsp;
                                     <SiMicrosoftazure style={{ fontSize: '35px' }} className="the-icon" />&nbsp;
                                 </Tilt>
-                            </div>
+                            </div> */}
                         </div>
                     </Tilt>
 

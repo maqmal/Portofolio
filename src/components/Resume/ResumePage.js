@@ -99,8 +99,7 @@ const ResumePage = () => {
                                 <React.Fragment>
                                     <ol>
                                         <li>
-                                            Worked on developing and optimizing the <span> database </span> for Traveloka's
-                                            system, resulting in faster execution time and improved user
+                                            Worked on developing and optimizing the <span>Postgresql Stored Procedures,</span> resulting in faster execution time and improved user
                                             experience. This included analyzing the database schema and query
                                             performance, identifying bottlenecks, and implementing
                                             <span> optimization </span> strategies such as <span> indexing, partitioning, and caching.</span>
